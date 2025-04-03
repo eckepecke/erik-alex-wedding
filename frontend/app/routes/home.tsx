@@ -1,5 +1,3 @@
-import { Welcome } from "../components/welcome/welcome";
-
 // {}: Route.MetaArgs
 export function meta() {
   return [
@@ -9,5 +7,5 @@ export function meta() {
 }
 
 export default function Home() {
-  return <Welcome />;
+  return <p> ha lou </p>;
 }

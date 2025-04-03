@@ -1,15 +1,17 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   isRouteErrorResponse,
-  Link,
   Links,
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration,
+  ScrollRestoration
 } from "react-router";
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import { CustomNavBar } from './components/navbar/navbar';
+import { NavLink } from './routes/types';
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -25,6 +27,11 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const navLinks: NavLink[] = [
+    { title: "About", url: "/about" },
+  ]
+  const homeLink: NavLink = { title: "Home", url: "/" }
+
   return (
     <html lang="en">
       <head>
@@ -34,10 +41,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-        </ul>
+        {CustomNavBar(navLinks, homeLink)}
         {children}
         <ScrollRestoration />
         <Scripts />

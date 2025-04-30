@@ -1,8 +1,8 @@
 // {}: Route.MetaArgs
 export function meta() {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Homepage" },
+    { name: "homepage", content: "" },
   ];
 }
 

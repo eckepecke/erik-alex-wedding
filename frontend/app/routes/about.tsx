@@ -4,7 +4,7 @@ import { AboutUs }  from "../components/about/about";
 export function meta() {
   return [
     { title: "About" },
-    { name: "description", content: "Welcome to about page" },
+    { name: "about", content: "" },
   ];
 }
 

@@ -1,15 +1,15 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import { AboutUs } from './about';
+import { Location } from './location';
 
-describe('AboutUs Component', () => {
-  test('renders About page', () => {
+describe('Location Component', () => {
+  test('renders Location page', () => {
     const { getByText } = render(
       <MemoryRouter>
-        <AboutUs />
+        <Location />
       </MemoryRouter>
     );
-    expect(getByText('rolig info och bilder etc om paret')).toBeDefined();
+    expect(getByText('info om lokalen')).toBeDefined();
   });
 });

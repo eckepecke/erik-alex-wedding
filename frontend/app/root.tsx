@@ -28,9 +28,12 @@ export const links: Route.LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const navLinks: NavLink[] = [
-    { title: "About", url: "/about" },
+    { title: "Hem", url: "/" },
+    { title: "Om oss", url: "/about" },
+    { title: "Anmälan", url: "/registration" },
+    { title: "Lokalen", url: "/location" },
+    { title: "Kontakt", url: "/contact" },
   ]
-  const homeLink: NavLink = { title: "Home", url: "/" }
 
   return (
     <html lang="en">
@@ -41,7 +44,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {CustomNavBar(navLinks, homeLink)}
+        {CustomNavBar(navLinks)}
         {children}
         <ScrollRestoration />
         <Scripts />

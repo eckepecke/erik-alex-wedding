@@ -1,3 +1,3 @@
 export function AboutUs() {
-   return <h1>About us</h1>
+   return <h1>rolig info och bilder etc om paret</h1>
 }

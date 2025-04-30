@@ -6,7 +6,7 @@ describe('CustomNavBar', () => {
     test('given no links, renders without error', () => {
         const { container } = render(
             <MemoryRouter>
-                {CustomNavBar([], { title: 'Home', url: '/' })}
+                {CustomNavBar([])}
             </MemoryRouter>
         );
         expect(container).toBeDefined();
@@ -17,13 +17,12 @@ describe('CustomNavBar', () => {
 
         render(
             <MemoryRouter>
-                {CustomNavBar(links, { title: 'Home', url: '/' })}
+                {CustomNavBar(links)}
             </MemoryRouter>
         );
 
-        expect(screen.getByText('Home')).toBeInTheDocument();
         expect(screen.getByText('ha lou')).toBeInTheDocument();
         expect(screen.getByText('title')).toBeInTheDocument();
-        expect(screen.getAllByRole('link')).toHaveLength(3);
+        expect(screen.getAllByRole('link')).toHaveLength(2);
     });
 });

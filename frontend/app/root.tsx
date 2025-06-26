@@ -44,7 +44,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {CustomNavBar(navLinks)}
+        < CustomNavBar navLinks={navLinks} />
         {children}
         <ScrollRestoration />
         <Scripts />

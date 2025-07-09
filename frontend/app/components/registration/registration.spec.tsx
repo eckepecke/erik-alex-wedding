@@ -10,6 +10,6 @@ describe('Registration Component', () => {
         <Registration />
       </MemoryRouter>
     );
-    expect(getByText('embedda ett google formulär för anmälan här?')).toBeDefined();
+    expect(getByText('Anmälan till Emilla & Viktors Bröllop')).toBeDefined();
   });
 });

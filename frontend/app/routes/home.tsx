@@ -1,8 +1,8 @@
 // {}: Route.MetaArgs
 export function meta() {
   return [
-    { title: "Homepage" },
-    { name: "homepage", content: "" },
+    { title: "Emilla & Viktors Bröllop" },
+    { name: "Emilla & Viktors Bröllop", content: "" },
   ];
 }
 

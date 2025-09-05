@@ -10,8 +10,26 @@ describe('Footer Component', () => {
         <Footer />
       </MemoryRouter>
     );
-    expect(getByText('viktorolofsson98@gmail.com')).toBeDefined();
-    expect(getByText('+46704441671')).toBeDefined();
     expect(getByText('Emilla & Viktors Bröllop 2032 (33?)')).toBeDefined();
+  });
+
+  test('renders contact email as a clickable mailto link', () => {
+    const { getByText } = render(
+      <MemoryRouter>
+        <Footer />
+      </MemoryRouter>
+    );
+    const emailLink = getByText('viktorolofsson98@gmail.com').closest('a');
+    expect(emailLink).toHaveAttribute('href', 'mailto:viktorolofsson98@gmail.com');
+  });
+
+  test('renders contact phone as a clickable tel link', () => {
+    const { getByText } = render(
+      <MemoryRouter>
+        <Footer />
+      </MemoryRouter>
+    );
+    const phoneLink = getByText('+46704441671').closest('a');
+    expect(phoneLink).toHaveAttribute('href', 'tel:+46704441671');
   });
 });

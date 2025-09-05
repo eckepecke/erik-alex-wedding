@@ -3,8 +3,8 @@ import { Registration as RegistrationComponent }  from "../components/registrati
 // {}: Route.MetaArgs
 export function meta() {
   return [
-    { title: "registration" },
-    { name: "registration", content: "" },
+    { title: "Anmälan" },
+    { name: "Anmälan", content: "" },
   ];
 }
 

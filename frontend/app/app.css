@@ -1,15 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-display: "Pixelify Sans", monospace;
 }
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  font-family: 'Pixelify Sans', monospace;
+  background-color: #fff;
+  color: #222;
+}
 
-  @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
+
+  html,
+  body {
+    background-color: #202329;
+    color: #fff;
     color-scheme: dark;
   }
 }
@@ -22,4 +30,62 @@ body {
 
 .app-content {
   flex: 1;
+}
+
+/* Navbar styles */
+.navbar .nav-link {
+  color: #222 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar .nav-link {
+    color: #fff !important;
+  }
+}
+
+/* Offcanvas styles */
+@media (prefers-color-scheme: light),
+(prefers-color-scheme: no-preference) {
+
+  .offcanvas,
+  .offcanvas .offcanvas-body {
+    background-color: #fff !important;
+    color: #222 !important;
+  }
+
+  .offcanvas .nav-link {
+    color: #222 !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+
+  .offcanvas,
+  .offcanvas .offcanvas-body {
+    background-color: #202329 !important;
+    color: #fff !important;
+  }
+
+  .offcanvas .nav-link {
+    color: #fff !important;
+  }
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url('/favicon.ico') !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+@media (prefers-color-scheme: light), (prefers-color-scheme: no-preference) {
+  .navbar .navbar-brand span {
+    color: #222;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .navbar .navbar-brand span {
+    color: #fff;
+  }
 }

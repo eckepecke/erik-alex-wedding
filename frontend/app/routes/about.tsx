@@ -3,8 +3,8 @@ import { AboutUs }  from "../components/about/about";
 // {}: Route.MetaArgs
 export function meta() {
   return [
-    { title: "About" },
-    { name: "about", content: "" },
+    { title: "Om oss" },
+    { name: "Om oss", content: "" },
   ];
 }
 

@@ -49,10 +49,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <div className="app-content">
           {children}
         </div>
+        <Footer />
         <ScrollRestoration />
         <Scripts />
       </body>
-      <Footer />
     </html>
   );
 }

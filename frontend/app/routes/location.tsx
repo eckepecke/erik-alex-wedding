@@ -3,8 +3,8 @@ import { Location as LocationComponent }  from "../components/location/location"
 // {}: Route.MetaArgs
 export function meta() {
   return [
-    { title: "location" },
-    { name: "location", content: "" },
+    { title: "Lokalen" },
+    { name: "Lokalen", content: "" },
   ];
 }
 

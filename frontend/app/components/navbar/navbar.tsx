@@ -24,9 +24,27 @@ export function CustomNavBar({ navLinks }: CustomNavBarProps) {
 
     return (
         <>
-            <Navbar expand="md" className={`bg-body-tertiary mb-3 ${scrolled ? "opacity-50" : ""}`} sticky="top">
-                <Container fluid>
-                    <Navbar.Toggle aria-controls={`offcanvasNavbar-expand`} onClick={handleShow} />
+            <Navbar expand="md" className={`mb-3 ${scrolled ? "opacity-50" : ""}`} sticky="top">
+
+                <Container fluid className="position-relative">
+                    <Navbar.Brand
+                        href="/"
+                        className="d-none d-md-flex align-items-center position-absolute start-0"
+                        style={{ minWidth: 0 }}
+                    >
+                        <img
+                            src="/favicon.ico"
+                            alt="Logo"
+                            width={32}
+                            height={32}
+                            className="d-inline-block align-top"
+                            style={{ marginRight: 8 }}
+                        />
+                        <span className="ms-2 d-none d-lg-inline" style={{ maxWidth: 250 }}>
+                            Emilla & Viktors Bröllop
+                        </span>
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls={`offcanvasNavbar-expand`} onClick={handleShow} className="custom-toggler" />
                     <Navbar.Offcanvas
                         id={`offcanvasNavbar-expand`}
                         aria-labelledby={`offcanvasNavbarLabel-expand`}
@@ -36,7 +54,7 @@ export function CustomNavBar({ navLinks }: CustomNavBarProps) {
                     >
                         <Offcanvas.Header closeButton>
                             <Offcanvas.Title id={`offcanvasNavbarLabel-expand`}>
-                                What to put here?
+                                Emilla & Viktors Bröllop 2032 (33?)
                             </Offcanvas.Title>
                         </Offcanvas.Header>
                         <Offcanvas.Body>

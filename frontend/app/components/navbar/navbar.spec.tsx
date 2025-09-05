@@ -38,7 +38,8 @@ describe('CustomNavBar', () => {
 
         expect(screen.getByText('ha lou')).toBeInTheDocument();
         expect(screen.getByText('title')).toBeInTheDocument();
-        expect(screen.getAllByRole('link')).toHaveLength(2);
+        // includes brand link
+        expect(screen.getAllByRole('link')).toHaveLength(3);
     });
 
     test('given scrolled, navbar has opacity', () => {
@@ -53,7 +54,7 @@ describe('CustomNavBar', () => {
             window.dispatchEvent(new Event('scroll'));
         });
 
-        expect(container.querySelector('.bg-body-tertiary')).toHaveClass('opacity-50');
+        expect(container.querySelector('.mb-3')).toHaveClass('opacity-50');
     });
 
     test('given not scrolled, navbar has no opacity', () => {
@@ -68,7 +69,7 @@ describe('CustomNavBar', () => {
             window.dispatchEvent(new Event('scroll'));
         });
 
-        expect(container.querySelector('.bg-body-tertiary')).not.toHaveClass('opacity-50');
+        expect(container.querySelector('.mb-3')).not.toHaveClass('opacity-50');
     });
 
     // TODO should probably test for screen sizes and burger menu

@@ -3,7 +3,7 @@ import { Contact as ContactComponent }  from "../components/contact/contact";
 // {}: Route.MetaArgs
 export function meta() {
   return [
-    { title: "Contact" },
+    { title: "contact" },
     { name: "contact", content: "" },
   ];
 }

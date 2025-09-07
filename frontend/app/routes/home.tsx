@@ -1,3 +1,5 @@
+import { HomePage } from "~/components/home/home";
+
 // {}: Route.MetaArgs
 export function meta() {
   return [
@@ -7,5 +9,5 @@ export function meta() {
 }
 
 export default function Home() {
-  return <p> ha lou </p>;
+  return <HomePage />;
 }

@@ -1,3 +1,5 @@
 export function Contact() {
-    return <h1>kontaktuppgifter</h1>
+    return <div className="centered-content">
+        <h1>kontaktuppgifter</h1>
+    </div>
 }

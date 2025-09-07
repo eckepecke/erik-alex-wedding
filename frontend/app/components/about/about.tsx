@@ -1,3 +1,8 @@
+import { Gallery } from "../gallery/gallery";
+
 export function AboutUs() {
-   return <h1>rolig info och bilder etc om paret</h1>
+   return <div className="centered-content">
+      <h1>About Us</h1>
+      <Gallery />
+   </div>
 }

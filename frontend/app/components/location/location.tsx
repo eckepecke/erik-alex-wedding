@@ -1,5 +1,5 @@
 export function Location() {
-    return <div>
+    return <div className="centered-content">
         <h1>info om lokalen</h1>
         <h1>info info info</h1>
         <h1>info info info</h1>

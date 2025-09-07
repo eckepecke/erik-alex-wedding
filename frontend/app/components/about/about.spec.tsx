@@ -10,6 +10,6 @@ describe('AboutUs Component', () => {
         <AboutUs />
       </MemoryRouter>
     );
-    expect(getByText('rolig info och bilder etc om paret')).toBeDefined();
+    expect(getByText('About Us')).toBeDefined();
   });
 });

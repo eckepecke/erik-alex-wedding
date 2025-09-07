@@ -15,7 +15,7 @@ export function Gallery({ images }: { images: string[] }) {
         dynamicHeight={true}
         >
           {images.map((src, index) => (
-            <div className="pixel-corners" key={index}>
+            <div className="rounded-corners" key={index}>
               <img src={src} />
             </div>
           ))}

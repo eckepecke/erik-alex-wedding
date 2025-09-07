@@ -38,20 +38,42 @@ body {
 }
 
 .gallery-carousel-container {
-  width: 30%;
+  width: 80%;
+  max-width: 600px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.gallery-carousel-container .carousel .slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: unset;
+  height: auto;
+}
+
 .gallery-carousel-container .carousel .slide img {
-  max-height: 400px; /* Adjust as needed */
+  max-height: 500px;
   width: auto;
   object-fit: contain;
   margin: 0 auto;
   display: block;
 }
+
+.carousel .control-arrow {
+  opacity: 0.3;
+  background: none !important;
+  color: #222 !important;
+  transition: opacity 0.2s;
+}
+
+.carousel .control-arrow:hover {
+  opacity: 0.7;
+  color: #555 !important;
+} 
 
 .centered-content {
   display: flex;
@@ -59,6 +81,47 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.pixel-corners {
+  clip-path: polygon(
+    0px calc(100% - 20px),
+    4px calc(100% - 20px),
+    4px calc(100% - 12px),
+    8px calc(100% - 12px),
+    8px calc(100% - 8px),
+    12px calc(100% - 8px),
+    12px calc(100% - 4px),
+    20px calc(100% - 4px),
+    20px 100%,
+    calc(100% - 20px) 100%,
+    calc(100% - 20px) calc(100% - 4px),
+    calc(100% - 12px) calc(100% - 4px),
+    calc(100% - 12px) calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 12px),
+    calc(100% - 4px) calc(100% - 12px),
+    calc(100% - 4px) calc(100% - 20px),
+    100% calc(100% - 20px),
+    100% 20px,
+    calc(100% - 4px) 20px,
+    calc(100% - 4px) 12px,
+    calc(100% - 8px) 12px,
+    calc(100% - 8px) 8px,
+    calc(100% - 12px) 8px,
+    calc(100% - 12px) 4px,
+    calc(100% - 20px) 4px,
+    calc(100% - 20px) 0px,
+    20px 0px,
+    20px 4px,
+    12px 4px,
+    12px 8px,
+    8px 8px,
+    8px 12px,
+    4px 12px,
+    4px 20px,
+    0px 20px
+  );
 }
 
 @media (prefers-color-scheme: dark) {

@@ -4,18 +4,20 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Heart } from 'lucide-react';
+import { useTranslation } from '../../hooks/useTranslations.jsx';
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { t, language, setLanguage } = useTranslation();
 
   const navLinks = [
-    { path: '/', label: 'Home' },
-    { path: '/story', label: 'Our Story' },
-    { path: '/details', label: 'Details' },
-    { path: '/travel', label: 'Travel' },
-    { path: '/rsvp', label: 'RSVP' },
-    { path: '/registry', label: 'Registry' }
+    { path: '/', label: t('nav.home') },
+    { path: '/story', label: t('nav.story') },
+    { path: '/details', label: t('nav.details') },
+    { path: '/travel', label: t('nav.travel') },
+    { path: '/rsvp', label: t('nav.rsvp') },
+    { path: '/registry', label: t('nav.registry') }
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -30,31 +32,45 @@ export const Navigation = () => {
             <span className="font-serif text-xl text-gray-800">A & E</span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`
-                  text-sm font-medium transition-colors
-                  ${isActive(link.path) 
-                    ? 'text-rose-500 border-b-2 border-rose-500' 
-                    : 'text-gray-600 hover:text-rose-400'}
-                `}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
+          <div className="flex items-center space-x-6">
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex space-x-8">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`
+                    text-sm font-medium transition-colors
+                    ${isActive(link.path) 
+                      ? 'text-rose-500 border-b-2 border-rose-500' 
+                      : 'text-gray-600 hover:text-rose-400'}
+                  `}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
 
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-md text-gray-600 hover:text-rose-400"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+            {/* Language Switcher - Desktop */}
+            <div className="hidden md:block">
+              <select 
+                value={language} 
+                onChange={(e) => setLanguage(e.target.value)}
+                className="border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-rose-200"
+              >
+                <option value="en">EN</option>
+                <option value="ro">RO</option>
+              </select>
+            </div>
+
+            {/* Mobile menu button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="md:hidden p-2 rounded-md text-gray-600 hover:text-rose-400"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -77,6 +93,18 @@ export const Navigation = () => {
                 {link.label}
               </Link>
             ))}
+            
+            {/* Language Switcher - Mobile */}
+            <div className="px-3 py-2">
+              <select 
+                value={language} 
+                onChange={(e) => setLanguage(e.target.value)}
+                className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-rose-200"
+              >
+                <option value="en">English</option>
+                <option value="ro">Română</option>
+              </select>
+            </div>
           </div>
         </div>
       )}

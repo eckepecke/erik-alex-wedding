@@ -1,0 +1,117 @@
+{
+  "wedding": {
+    "bride": "Alexandra",
+    "groom": "Erik", 
+    "date": "July 17, 2026",
+    "time": "4:00 PM",
+    "venue": {
+      "name": "Mirli",
+      "address": "Heinratsberg 69",
+      "city": "3011 Tullnerbach",
+      "country": "Austria"
+    },
+    "schedule": [
+      { "time": "4:00 PM", "event": "Grill the pig" },
+      { "time": "5:30 PM", "event": "Eat the pig" },
+      { "time": "7:00 PM", "event": "Hora" },
+      { "time": "11:00 PM", "event": "Party" }
+    ]
+  },
+
+  "header": {
+    "title": "Alexandra & Erik",
+    "subtitle": "We're getting married!"
+  },
+
+  "nav": {
+    "home": "Home",
+    "story": "Our Story", 
+    "details": "Details",
+    "rsvp": "RSVP",
+    "registry": "Registry"
+  },
+
+  "details": {
+    "title": "Wedding Details",
+    "subtitle": "Everything you need to know about our special day",
+    "infoCards": {
+      "when": "When",
+      "where": "Where", 
+      "schedule": "Schedule",
+      "ceremonyPrompt": "Ceremony begins promptly",
+      "getDirections": "Get Directions"
+    },
+
+    "ceremonyReception": {
+      "ceremony": "Ceremony",
+      "reception": "Reception",
+      "ceremonyDescription": "Our ceremony will take place at {venueName} in Wiener Wald. The outdoor setting provides a romantic backdrop as we exchange our vows.",
+      "receptionDescription": "Following the ceremony, join us for cocktails, dinner, and dancing under the stars in the palace ballroom.",
+      "duration": "Duration: Approximately 30 minutes",
+      "seating": "Seating will be provided",
+      "weatherBackup": "Weather backup plan in place",
+      "unplugged": "Unplugged ceremony (no phones please)",
+      "welcomeDrinks": "Welcome drinks & canapés",
+      "dinner": "Three-course seated dinner",
+      "openBar": "Open bar all evening",
+      "liveMusic": "Live band & DJ",
+      "lateSnacks": "Late night snacks"
+    },
+
+  "dressCode": {
+    "title": "Dress Code",
+    "attire": "Formal Attire",
+    "description": "We're going elegant! Think cocktail dresses, suits, and your finest evening wear. The ceremony will be outdoors, so consider comfortable shoes for the garden setting.",
+    "noteStrong": "Please note:",
+    "noteText": "We kindly request that guests refrain from wearing white, cream, or ivory to allow our bride to shine."
+    },
+
+  "photography": {
+      "title": "Photography",
+      "description": "We've hired professional photographers to capture every moment of our special day. To ensure they can do their best work and that we can all be truly present:",
+      "unpluggedStrong": "Unplugged Ceremony:",
+      "unpluggedText": "Please keep phones and cameras away during the ceremony",
+      "shareStrong": "Share Your Photos:",
+      "shareText": "Use our hashtag",
+      "shareTextAfter": "for reception photos",
+      "professionalStrong": "Professional Photos:",
+      "professionalText": "Will be shared with all guests after the wedding"
+    },
+
+  "registry": {
+      "title": "Registry & Gifts",
+      "description": "Your presence at our wedding is the greatest gift of all. However, if you wish to honor us with a gift, we've registered at a few of our favorite stores.",
+      "button": "View Registry"
+    },
+
+  "importantNotes": {
+      "title": "Important Information",
+      "weather": {
+        "title": "Weather Considerations",
+        "description": "June weather in Vienna is typically beautiful, but we have an indoor backup plan in case of rain. Bring a light jacket for the evening."
+      },
+      "parking": {
+        "title": "Parking",
+        "description": "Free parking is available at the venue. Valet service will be provided. We also recommend taxi services for those who wish to enjoy the open bar!"
+      },
+      "children": {
+        "title": "Children",
+        "description": "While we love your little ones, we've decided to make our wedding an adults-only celebration. We hope this gives parents a night off to relax!"
+      },
+      "dietary": {
+        "title": "Dietary Requirements",
+        "description": "Please let us know of any dietary restrictions or allergies when you RSVP. We'll work with our caterers to accommodate all needs."
+      }
+    }
+  },
+
+
+  "home": {
+    "quickLinks": {
+      "title": "Join Us in Celebrating",
+      "description": "We're so excited to share our special day with you. Please explore our website for all the details you'll need.",
+      "rsvp": "RSVP Now",
+      "details": "View Details"
+    }
+  }
+}

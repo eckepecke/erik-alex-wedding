@@ -1,0 +1,116 @@
+{
+  "wedding": {
+    "bride": "Alexandra",
+    "groom": "Erik",
+    "date": "17 Iulie 2026",
+    "time": "16:00",
+    "venue": {
+      "name": "Mirli",
+      "address": "Heinratsberg 69",
+      "city": "3011 Tullnerbach",
+      "country": "Austria"
+    },
+    "schedule": [
+      { "time": "16:00", "event": "Grătar cu porc" },
+      { "time": "17:30", "event": "Mâncat porc" },
+      { "time": "19:00", "event": "Hora" },
+      { "time": "23:00", "event": "Petrecere" }
+    ]
+  },
+
+  "header": {
+    "title": "Alexandra & Erik",
+    "subtitle": "Ne căsătorim!"
+  },
+
+  "nav": {
+    "home": "Acasă",
+    "story": "Povestea Noastră",
+    "details": "Detalii",
+    "rsvp": "RSVP",
+    "registry": "Lista de Nuntă"
+  },
+
+  "details": {
+    "title": "Detalii Nuntă",
+    "subtitle": "Tot ce trebuie să știi despre ziua noastră specială",
+    "ceremonyReception": {
+      "ceremony": "Ceremonie",
+      "reception": "Recepție",
+      "ceremonyDescription": "Ceremonia noastră va avea loc la {venueName} în Pădurea Vieneza. Cadrul în aer liber oferă un fundal romantic în timp ce ne schimbăm jurămintele.",
+      "receptionDescription": "După ceremonie, alăturați-vă nouă pentru cocktailuri, cină și dans sub stele în sala de bal a palatului.",
+      "duration": "Durată: Aproximativ 30 de minute",
+      "seating": "Vor fi asigurate locuri",
+      "weatherBackup": "Plan de rezervă în caz de vreme nefavorabilă",
+      "unplugged": "Ceremonie fără telefoane (vă rugăm fără telefoane)",
+      "welcomeDrinks": "Băuturi de bun venit & canapele",
+      "dinner": "Cină cu trei feluri de mâncare la masă",
+      "openBar": "Bar deschis toată seara",
+      "liveMusic": "Formație live & DJ",
+      "lateSnacks": "Gustări târzii"
+    },
+
+    "infoCards": {
+        "when": "Când",
+        "where": "Unde",
+        "schedule": "Program",
+        "ceremonyPrompt": "Ceremonia începe la timp",
+        "getDirections": "Obține direcții"
+    },
+
+    "dressCode": {
+      "title": "Cod de Îmbrăcăminte",
+      "attire": "Îmbrăcăminte Formală",
+      "description": "Vrem să fim eleganti! Gândiți-vă la rochii de cocktail, costume și cele mai frumoase ținute de seară. Ceremonia va fi în aer liber, așa că luați în considerare pantofi confortabili pentru cadrul din grădină.",
+      "noteStrong": "Vă rugăm să rețineți:",
+      "noteText": "Vă rugăm cu delicatețe să nu purtați alb, crem sau fil pentru a permite miresei să strălucească."
+    },
+
+    "photography": {
+      "title": "Fotografie",
+      "description": "Am angajat fotografi profesioniști să captureze fiecare moment al zilei noastre speciale. Pentru a ne asigura că își pot face treaba în condiții optime și că toți putem fi cu adevărat prezenți:",
+      "unpluggedStrong": "Ceremonie Fără Telefoane:",
+      "unpluggedText": "Vă rugăm să păstrați telefoanele și camerele foto departe în timpul ceremoniei",
+      "shareStrong": "Distribuiți-vă Fotografiile:",
+      "shareText": "Folosiți hashtag-ul nostru",
+      "shareTextAfter": "pentru fotografiile de la recepție",
+      "professionalStrong": "Fotografii Profesionale:",
+      "professionalText": "Vor fi distribuite tuturor invitaților după nuntă"
+    },
+
+  "importantNotes": {
+      "title": "Informații Importante",
+      "weather": {
+        "title": "Considerații Meteo",
+        "description": "Vremea în iunie în Viena este de obicei frumoasă, dar avem un plan de rezervă în interior în caz de ploaie. Aduceți o jachetă ușoară pentru seară."
+      },
+      "parking": {
+        "title": "Parcare",
+        "description": "Parcarea gratuită este disponibilă la locație. Va fi oferit serviciu de valet. Recomandăm și servicii de taxi pentru cei care doresc să se bucure de barul deschis!"
+      },
+      "children": {
+        "title": "Copii",
+        "description": "Deși ne iubim micuții, am decis să facem din nunta noastră o sărbătoare doar pentru adulți. Sperăm că acest lucru le oferă părinților o noapte liberă pentru a se relaxa!"
+      },
+      "dietary": {
+        "title": "Cerințe Dietetice",
+        "description": "Vă rugăm să ne anunțați despre orice restricții dietetice sau alergii când confirmați prezența. Vom lucra cu catering-ul nostru pentru a acomoda toate nevoile."
+      }
+  },
+
+  "registry": {
+      "title": "Lista de Nuntă & Cadouri",
+      "description": "Prezența dumneavoastră la nunta noastră este cel mai mare cadou. Cu toate acestea, dacă doriți să ne onorați cu un cadou, ne-am înregistrat la câteva dintre magazinele noastre preferate.",
+      "button": "Vezi Lista de Nuntă"
+    }
+  },
+
+  "home": {
+    "quickLinks": {
+      "title": "Alăturați-vă Nouă în Sărbătoare",
+      "description": "Suntem foarte încântați să împărtășim ziua noastră specială cu dumneavoastră. Vă rugăm să explorați site-ul nostru pentru toate detaliile de care veți avea nevoie.",
+      "rsvp": "RSVP Acum",
+      "details": "Vezi Detalii"
+    }
+  }
+}

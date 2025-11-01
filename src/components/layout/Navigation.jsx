@@ -52,15 +52,29 @@ export const Navigation = () => {
             </div>
 
             {/* Language Switcher - Desktop */}
-            <div className="hidden md:block">
-              <select 
-                value={language} 
-                onChange={(e) => setLanguage(e.target.value)}
-                className="border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-rose-200"
-              >
-                <option value="en">EN</option>
-                <option value="ro">RO</option>
-              </select>
+            <div className="hidden md:flex gap-1">
+            <button
+                onClick={() => setLanguage('en')}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md border transition-all ${
+                language === 'en' 
+                    ? 'border-rose-500 bg-rose-50 shadow-sm' 
+                    : 'border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50'
+                }`}
+            >
+                <span className="text-lg">🇬🇧</span>
+                <span className="text-sm font-medium">EN</span>
+            </button>
+            <button
+                onClick={() => setLanguage('ro')}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md border transition-all ${
+                language === 'ro' 
+                    ? 'border-rose-500 bg-rose-50 shadow-sm' 
+                    : 'border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50'
+                }`}
+            >
+                <span className="text-lg">🇷🇴</span>
+                <span className="text-sm font-medium">RO</span>
+            </button>
             </div>
 
             {/* Mobile menu button */}
@@ -96,14 +110,30 @@ export const Navigation = () => {
             
             {/* Language Switcher - Mobile */}
             <div className="px-3 py-2">
-              <select 
-                value={language} 
-                onChange={(e) => setLanguage(e.target.value)}
-                className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-rose-200"
-              >
-                <option value="en">English</option>
-                <option value="ro">Română</option>
-              </select>
+            <div className="flex gap-2">
+                <button
+                onClick={() => setLanguage('en')}
+                className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg border-2 transition-all ${
+                    language === 'en' 
+                    ? 'border-rose-500 bg-rose-50 shadow-sm' 
+                    : 'border-gray-200 bg-white hover:border-gray-300'
+                }`}
+                >
+                <span className="text-2xl">🇬🇧</span>
+                <span className="text-sm font-medium">EN</span>
+                </button>
+                <button
+                onClick={() => setLanguage('ro')}
+                className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg border-2 transition-all ${
+                    language === 'ro' 
+                    ? 'border-rose-500 bg-rose-50 shadow-sm' 
+                    : 'border-gray-200 bg-white hover:border-gray-300'
+                }`}
+                >
+                <span className="text-2xl">🇷🇴</span>
+                <span className="text-sm font-medium">RO</span>
+                </button>
+            </div>
             </div>
           </div>
         </div>

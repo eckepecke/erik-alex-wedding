@@ -12,6 +12,10 @@ import { useScrollToTop } from './hooks/useScrollToTop.js';
 import Home from './pages/Home';
 import Story from './pages/Story';
 import Details from './pages/Details';
+import RSVP from './pages/RSVP';
+import Travel from './pages/Travel';
+
+
 
 function ScrollToTop() {
   useScrollToTop();
@@ -30,10 +34,12 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/story" element={<Story />} />
               <Route path="/details" element={<Details />} />
+              <Route path="/rsvp" element={<RSVP />} />
+              <Route path="/travel" element={<Travel />} />
+
+
 
             {/* Uncomment as you create these pages
-            <Route path="/travel" element={<Travel />} />
-            <Route path="/rsvp" element={<RSVP />} />
             <Route path="/registry" element={<Registry />} />
             */}
             </Routes>

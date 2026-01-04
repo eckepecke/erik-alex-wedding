@@ -19,14 +19,17 @@ const Details = () => {
         title={t('details.title')} 
         subtitle={t('details.subtitle')}
       />
+    <div className="page-section"> {/* Full-width background wrapper */}
 
-      <div className="container-custom py-16 page-section">
+      <div className="container-custom py-16">
         <InfoCards />
         <DressCode />
         <CeremonyReception />
         <Photography />
         <Gifts />
       </div>
+    </div>
+
 
       <ImportantNotes />
       <QuestionsCTA />

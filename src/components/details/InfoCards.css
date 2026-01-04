@@ -13,7 +13,7 @@
 /* Icon inside card */
 .info-card-icon {
   @apply w-12 h-12 mx-auto mb-4;
-  color: var(--color-primary-500); /* rose-400 equivalent */
+  color: var(--color-primary-800); /* rose-400 equivalent */
 }
 
 /* Card title */
@@ -24,7 +24,7 @@
 
 /* Card main text */
 .info-card-text {
-  color: var(--color-primary-600); /* gray-600 */
+  color: var(--color-primary-800); /* gray-600 */
   font-weight: 500;
   margin: 0;
 }
@@ -32,7 +32,7 @@
 /* Card secondary text */
 .info-card-text-sm {
   @apply text-sm mt-2;
-  color: var(--color-primary-500); /* rose for links */
+  color: var(--color-primary-800); /* rose for links */
 }
 
 .info-card-link {
@@ -50,7 +50,7 @@
 }
 
 .info-card-schedule p {
-  color: var(--color-primary-600);
+  color: var(--color-primary-800);
   font-size: 0.875rem; /* text-sm */
 }
 

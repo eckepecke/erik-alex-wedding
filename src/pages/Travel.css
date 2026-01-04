@@ -20,7 +20,7 @@
 /* General text */
 .travel-card p {
   @apply mb-3;
-  color: var(--color-primary-600);
+  color: var(--color-primary-800);
 }
 
 /* Lists */
@@ -29,7 +29,7 @@
 }
 
 .travel-card li {
-  color: var(--color-primary-600);
+  color: var(--color-primary-800);
 }
 
 .travel-card li strong {

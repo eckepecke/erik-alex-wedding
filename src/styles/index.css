@@ -27,7 +27,13 @@
     --color-primary-900: #1f335f;
 
 
-    --color-bg: #dde0ee; /* default white for pages */
+    --color-bg-white: #f2f6fd; /* default white for pages */
+    --color-bg-blue: #6e99df; /* default white for pages */
+
+    --card-color-dark: #6e99df;
+    --card-color-light: rgb(229, 229, 252);
+
+
 
     --gradient-bg: linear-gradient(
       to bottom right,
@@ -136,7 +142,7 @@ body {
   }
   
   .card-wedding {
-    @apply bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 cursor-pointer;
+    @apply rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 cursor-pointer;
     border: 1px solid var(--color-primary-100);
   }
   

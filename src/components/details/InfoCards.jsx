@@ -4,6 +4,8 @@ import { Calendar, MapPin, Clock } from 'lucide-react';
 import { useWeddingInfo } from '../../hooks/useWeddingInfo';
 import { useTranslation } from '../../hooks/useTranslations';
 import './InfoCards.css';
+import './commons.css';
+
 
 export const InfoCards = () => {
   const { weddingInfo, schedule } = useWeddingInfo();
@@ -11,7 +13,7 @@ export const InfoCards = () => {
 
   return (
     <div className="info-cards-grid">
-      <Card className="info-card" hover>
+      <Card className="info-card detail-card" hover>
         <Calendar className="info-card-icon" />
         <h3 className="info-card-title">{t('details.infoCards.when')}</h3>
         <p className="info-card-text">{weddingInfo.date}</p>
@@ -19,7 +21,7 @@ export const InfoCards = () => {
         <p className="info-card-text-sm">{t('details.infoCards.ceremonyPrompt')}</p>
       </Card>
 
-      <Card className="info-card" hover>
+      <Card className="info-card detail-card" hover>
         <MapPin className="info-card-icon" />
         <h3 className="info-card-title">{t('details.infoCards.where')}</h3>
         <p className="info-card-text">{weddingInfo.venue.name}</p>
@@ -35,7 +37,7 @@ export const InfoCards = () => {
         </a>
       </Card>
 
-      <Card className="info-card" hover>
+      <Card className="info-card detail-card" hover>
         <Clock className="info-card-icon" />
         <h3 className="info-card-title">{t('details.infoCards.schedule')}</h3>
         <div className="info-card-schedule">

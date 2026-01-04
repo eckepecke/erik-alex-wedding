@@ -3,7 +3,7 @@
 /* Wrapper for any page section */
 .page-section {
   @apply py-16 px-6 min-h-screen flex flex-col items-center;
-  background-color: var(--color-bg); /* main page background variable */
+  background-color: var(--color-bg-white); /* main page background variable */
 }
 
 /* Container for text/content inside section */

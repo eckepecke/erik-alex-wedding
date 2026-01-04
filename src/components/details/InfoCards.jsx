@@ -9,6 +9,8 @@ import './commons.css';
 
 export const InfoCards = () => {
   const { weddingInfo, schedule } = useWeddingInfo();
+  const items = schedule?.items ?? [];
+
   const { t } = useTranslation();
 
   return (
@@ -37,17 +39,32 @@ export const InfoCards = () => {
         </a>
       </Card>
 
-      <Card className="info-card detail-card" hover>
+    <Card className="info-card detail-card" hover>
         <Clock className="info-card-icon" />
-        <h3 className="info-card-title">{t('details.infoCards.schedule')}</h3>
+        <h3 className="info-card-title">
+            {t('details.infoCards.schedule')}
+        </h3>
+
+        {schedule.date && (
+            <p className="info-card-date">{schedule.date}</p>
+        )}
+
         <div className="info-card-schedule">
-          {schedule.map((item, idx) => (
-            <p key={idx}>
-              <span>{item.time}</span> - {item.event}
-            </p>
-          ))}
+            {items.map((item, idx) => (
+            <div key={idx} className="schedule-item">
+                <p className="schedule-time">{item.time}</p>
+                <p className="schedule-title">{item.title}</p>
+
+                {item.description && (
+                <p className="schedule-description">
+                    {item.description}
+                </p>
+                )}
+            </div>
+            ))}
         </div>
-      </Card>
+    </Card>
+
     </div>
   );
 };

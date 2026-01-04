@@ -13,8 +13,9 @@ const Travel = () => {
         title="Travel & Stay" 
         subtitle="How to reach us and where to rest your head"
       />
+    <div className="page-section"> {/* Full-width background wrapper */}
 
-      <section className="travel-section container-custom page-section">
+      <section className="travel-section container-custom">
         {/* Getting There */}
         <Card className="travel-card">
           <div className="flex items-center gap-4 mb-6">
@@ -91,6 +92,7 @@ const Travel = () => {
           </p>
         </Card>
       </section>
+      </div>
     </>
   );
 };

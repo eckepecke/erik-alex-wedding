@@ -41,13 +41,51 @@
       "city": "3011 Tullnerbach",
       "country": "Austria"
     },
-    "schedule": [
-      { "time": "4:00 PM", "event": "Grill the pig" },
-      { "time": "5:30 PM", "event": "Eat the pig" },
-      { "time": "7:00 PM", "event": "Hora" },
-      { "time": "11:00 PM", "event": "Party" }
-    ]
-  },
+    "popup": {
+        "bride": "ALEXANDRA IANCU",
+        "groom": "ERIK OLOFSSON",
+        "intro": "joyfully invite you to celebrate their marriage"
+    },
+    "schedule": {
+        "date": "Friday, 17 July 2026",
+        "items": [
+        {
+            "time": "14:00",
+            "title": "Shuttle Departure from Vienna",
+            "description": "For a relaxed and shared journey, a shuttle bus will take you from Vienna to the venue. The exact pick-up location in Vienna will be communicated soon."
+        },
+        {
+            "time": "Approx. 14:45–15:00",
+            "title": "Arrival at Mirli",
+            "description": "Please take some time to arrive comfortably and find your seats before the ceremony."
+        },
+        {
+            "time": "15:30",
+            "title": "Wedding Ceremony",
+            "description": "We look forward to celebrating this special moment together with you."
+        },
+        {
+            "time": "16:00–18:00",
+            "title": "Reception (Agape)",
+            "description": "Following the ceremony, we invite you to a reception with aperitivo, finger food, prosecco, and cake. There will be time for congratulations, photos, and relaxed conversations."
+        },
+        {
+            "time": "From 18:30",
+            "title": "Dinner & Dancing",
+            "description": "After the reception, we warmly invite you to continue the celebration at the venue with a festive dinner and an evening of music and dancing."
+        },
+        {
+            "time": "03:00",
+            "title": "End of the Celebration"
+        },
+        {
+            "time": "03:15",
+            "title": "Shuttle Return to Vienna",
+            "description": "A shuttle bus will take guests back to the original pick-up location in Vienna."
+        }
+        ]
+    }
+    },
 
   "header": {
     "title": "Alexandra & Erik",

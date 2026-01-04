@@ -18,18 +18,23 @@ export const useWeddingInfo = () => {
     }
   };
 
-  // Use translated schedule if available, otherwise use constants
-  const schedule = () => {
+    const schedule = () => {
     try {
-      const translatedSchedule = t('wedding.schedule');
-      if (Array.isArray(translatedSchedule) && translatedSchedule.length > 0) {
+        const translatedSchedule = t('wedding.schedule');
+
+        if (
+        translatedSchedule &&
+        typeof translatedSchedule === 'object' &&
+        Array.isArray(translatedSchedule.items)
+        ) {
         return translatedSchedule;
-      }
+        }
     } catch (e) {
-      // Fallback to constants if translation fails
+        // fallback
     }
+
     return SCHEDULE;
-  };
+    };
 
   return {
     weddingInfo,

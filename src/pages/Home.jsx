@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Hero } from '../components/home/Hero';
+import Popup from '../components/home/Popup.jsx';
 import './Home.css';
 
 const Home = () => {
@@ -26,14 +27,10 @@ const Home = () => {
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-12">
         {/* Hero Section */}
         <Hero />
-
-        {/* Scroll indicator */}
-        {/* <div className="scroll-indicator">
-          <div className="scroll-indicator-inner">
-            <div className="scroll-indicator-dot" />
-          </div>
-        </div> */}
       </div>
+
+      {/* Wedding Invitation Popup */}
+      <Popup />
     </div>
   );
 };

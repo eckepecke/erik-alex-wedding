@@ -57,3 +57,22 @@
 .info-card-schedule p span {
   font-weight: 500;
 }
+
+.schedule-item {
+  margin-bottom: 1rem;
+}
+
+.schedule-time {
+  font-weight: 600;
+}
+
+.schedule-title {
+  font-weight: 500;
+}
+
+.schedule-description {
+  text-align: justify;
+
+  font-size: 0.9rem;
+  opacity: 0.85;
+}

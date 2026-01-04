@@ -1,0 +1,47 @@
+/* Gifts.css */
+
+/* Card wrapper */
+.gifts-card {
+  @apply mb-8;
+}
+
+/* Flex container */
+.gifts-content {
+  @apply flex items-start gap-6;
+}
+
+/* Icon */
+.gifts-icon {
+  @apply flex-shrink-0 w-10 h-10;
+  color: var(--color-primary-500); /* rose-400 equivalent */
+}
+
+/* Text container */
+.gifts-text {
+  @apply flex-grow;
+}
+
+/* Title */
+.gifts-title {
+  @apply text-2xl mb-3;
+  font-family: var(--font-heading);
+  color: var(--color-primary-800);
+}
+
+/* Description paragraph */
+.gifts-description {
+  @apply mb-4;
+  color: var(--color-primary-600); /* gray-600 */
+}
+
+/* Button link */
+.gifts-link {
+  @apply inline-block px-6 py-2 rounded-lg font-semibold transition-colors;
+  background-color: var(--color-primary-500);
+  color: white;
+  text-decoration: none;
+}
+
+.gifts-link:hover {
+  background-color: var(--color-primary-600);
+}

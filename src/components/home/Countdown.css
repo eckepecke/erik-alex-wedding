@@ -1,0 +1,96 @@
+
+/* ============================================
+   src/components/home/Countdown.css
+   ============================================ */
+
+.countdown-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+.countdown-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.countdown-value {
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
+  font-family: 'Georgia', 'Times New Roman', serif;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.countdown-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 300;
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+  .countdown-grid {
+    gap: 0.75rem;
+  }
+
+  .countdown-card {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .countdown-value {
+    font-size: 2.5rem;
+  }
+
+  .countdown-label {
+    font-size: 0.7rem;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .countdown-grid {
+    gap: 0.5rem;
+  }
+
+  .countdown-card {
+    padding: 1rem 0.5rem;
+    border-radius: 8px;
+  }
+
+  .countdown-value {
+    font-size: 2rem;
+  }
+
+  .countdown-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+  }
+}

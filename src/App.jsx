@@ -10,7 +10,6 @@ import { useScrollToTop } from './hooks/useScrollToTop.js';
 
 // Lazy load pages
 import Home from './pages/Home';
-import Story from './pages/Story';
 import Details from './pages/Details';
 import RSVP from './pages/RSVP';
 import Travel from './pages/Travel';
@@ -32,7 +31,6 @@ function App() {
           <main>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/story" element={<Story />} />
               <Route path="/details" element={<Details />} />
               <Route path="/rsvp" element={<RSVP />} />
               <Route path="/travel" element={<Travel />} />

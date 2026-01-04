@@ -1,0 +1,48 @@
+/* Photography.css */
+
+/* Card wrapper */
+.photography-card {
+  @apply mb-8;
+}
+
+/* Flex container inside card */
+.photography-content {
+  @apply flex items-start gap-6;
+}
+
+/* Icon */
+.photography-icon {
+  @apply flex-shrink-0 w-10 h-10;
+  color: var(--color-primary-500); /* rose-400 equivalent */
+}
+
+/* Text container */
+.photography-text {
+  @apply flex-grow;
+}
+
+/* Title */
+.photography-title {
+  @apply text-2xl mb-3;
+  font-family: var(--font-heading); /* your serif font */
+  color: var(--color-primary-800);
+}
+
+/* Description paragraph */
+.photography-description {
+  @apply mb-3;
+  color: var(--color-primary-600); /* gray-600 */
+}
+
+/* List */
+.photography-list {
+  @apply space-y-2;
+  color: var(--color-primary-600); /* gray-600 */
+  font-size: 0.875rem; /* text-sm */
+}
+
+/* Highlighted text inside list */
+.photography-hash {
+  color: var(--color-primary-500); /* rose-400 */
+  font-weight: 500;
+}

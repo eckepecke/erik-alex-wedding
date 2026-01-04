@@ -1,41 +1,40 @@
-// ============================================
-// src/pages/Home.jsx
-// ============================================
-import React from 'react';
-import { Hero } from '@components/home/Hero';
-import { Countdown } from '@components/home/Countdown';
-import { Link } from 'react-router-dom';
-import { Button } from '@components/ui/Button';
-import { useTranslation } from '../hooks/useTranslations';
+import React, { useState } from 'react';
+import { Hero } from '../components/home/Hero';
+import './Home.css';
 
 const Home = () => {
-  const { t } = useTranslation();
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  const backgroundImage = "/assets/EA.jpeg";
 
   return (
-    <>
-      <Hero />
-      <Countdown />
-      
-      {/* Quick Links */}
-      <section className="py-20 bg-rose-50">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-serif text-gray-800 mb-8">
-            {t('home.quickLinks.title')}
-          </h2>
-          <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-            {t('home.quickLinks.description')}
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/rsvp">
-              <Button size="lg">{t('home.quickLinks.rsvp')}</Button>
-            </Link>
-            <Link to="/details">
-              <Button size="lg" variant="outline">{t('home.quickLinks.details')}</Button>
-            </Link>
+    <div className="relative min-h-screen w-full overflow-hidden">
+      {/* Full-screen background image with overlay */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={backgroundImage}
+          alt="Wedding background"
+          className={`w-full h-full object-cover transition-opacity duration-1000 ${
+            imageLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+          onLoad={() => setImageLoaded(true)}
+        />
+        <div className="absolute inset-0 home-bg-overlay" />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-12">
+        {/* Hero Section */}
+        <Hero />
+
+        {/* Scroll indicator */}
+        {/* <div className="scroll-indicator">
+          <div className="scroll-indicator-inner">
+            <div className="scroll-indicator-dot" />
           </div>
-        </div>
-      </section>
-    </>
+        </div> */}
+      </div>
+    </div>
   );
 };
 

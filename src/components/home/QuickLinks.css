@@ -1,0 +1,120 @@
+/* ============================================
+   src/components/home/QuickLinks.css
+   ============================================ */
+
+.quicklinks-section {
+  padding: 4rem 1rem;
+  width: 100%;
+}
+
+.quicklinks-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.quicklinks-title {
+  font-size: 2.5rem;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.quicklinks-description {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.125rem;
+  margin-bottom: 4rem;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.quicklinks-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.quicklinks-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  display: block;
+}
+
+.quicklinks-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.quicklinks-icon-wrapper {
+  width: 4rem;
+  height: 4rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.quicklinks-card:hover .quicklinks-icon-wrapper {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.1);
+}
+
+.quicklinks-icon {
+  width: 2rem;
+  height: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.quicklinks-card-title {
+  font-size: 1.5rem;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.quicklinks-card-description {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .quicklinks-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .quicklinks-title {
+    font-size: 3rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .quicklinks-title {
+    font-size: 3.5rem;
+  }
+
+  .quicklinks-description {
+    font-size: 1.25rem;
+  }
+}

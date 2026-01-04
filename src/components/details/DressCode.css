@@ -1,0 +1,56 @@
+/* DressCode.css */
+
+/* Card wrapper */
+.dresscode-card {
+  @apply mb-8;
+}
+
+/* Flex layout inside card */
+.dresscode-content {
+  @apply flex items-start gap-6;
+}
+
+/* Icon wrapper */
+.dresscode-icon {
+  @apply flex-shrink-0;
+}
+
+.dresscode-icon svg {
+  @apply w-10 h-10;
+  color: var(--color-primary-500); /* rose-400 equivalent */
+}
+
+/* Text content */
+.dresscode-text {
+  @apply flex-grow;
+}
+
+.dresscode-title {
+  @apply text-2xl font-serif mb-3;
+  color: var(--color-primary-800); /* dark text */
+}
+
+.dresscode-subtitle {
+  @apply text-lg font-medium mb-2;
+  color: var(--color-primary-700); /* slightly lighter */
+}
+
+.dresscode-paragraph {
+  @apply mb-3;
+  color: var(--color-primary-600); /* gray-600 equivalent */
+}
+
+/* Note box */
+.dresscode-note {
+  @apply p-4 rounded-lg;
+  background-color: var(--color-primary-50); /* light rose bg */
+}
+
+.dresscode-note p {
+  @apply text-sm;
+  color: var(--color-primary-700);
+}
+
+.dresscode-note strong {
+  font-weight: 600;
+}

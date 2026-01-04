@@ -1,0 +1,39 @@
+/* ImportantNotes.css */
+
+/* Section wrapper */
+.important-notes-section {
+  @apply py-16;
+  background-color: var(--color-primary-50); /* light rose background */
+}
+
+/* Container */
+.important-notes-container {
+  @apply max-w-4xl mx-auto px-6;
+}
+
+/* Section title */
+.important-notes-title {
+  @apply text-3xl font-serif text-center mb-8;
+  color: var(--color-primary-800); /* dark text */
+}
+
+/* Grid for note cards */
+.important-notes-grid {
+  @apply grid md:grid-cols-2 gap-6;
+}
+
+/* Individual card */
+.important-note-card {
+  @apply p-6 rounded-lg;
+  background-color: var(--color-white, #ffffff);
+}
+
+.important-note-card h4 {
+  @apply font-semibold mb-2;
+  color: var(--color-primary-800); /* dark text */
+}
+
+.important-note-card p {
+  @apply text-sm;
+  color: var(--color-primary-600); /* gray text */
+}

@@ -1,4 +1,35 @@
 {
+    "hero": {
+        "names": "Alexandra & Erik",
+        "subtitle": "invite you to celebrate their wedding",
+        "date": "July 17, 2026",
+        "location": "Mirli, Wienerwald",
+        "rsvpButton": "RSVP Now",
+        "detailsButton": "View Details"
+    },
+    "countdown": {
+        "title": "Counting down to our special day",
+        "days": "Days",
+        "hours": "Hours",
+        "minutes": "Minutes",
+        "seconds": "Seconds"
+    },
+    "quickLinks": {
+        "mainTitle": "Everything You Need to Know",
+        "mainDescription": "From directions to dress code, we've got all the details covered",
+        "details": {
+        "title": "Event Details",
+        "description": "Timeline, venue information, and what to expect"
+        },
+        "travel": {
+        "title": "Travel & Stay",
+        "description": "Accommodations, directions, and local attractions"
+        },
+        "contact": {
+        "title": "Get in Touch",
+        "description": "Questions? We're here to help"
+        }
+    },
   "wedding": {
     "bride": "Alexandra",
     "groom": "Erik", 
@@ -105,7 +136,6 @@
       }
     }
   },
-
 
   "home": {
     "quickLinks": {

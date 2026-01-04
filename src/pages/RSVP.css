@@ -1,0 +1,40 @@
+/* RSVP.css */
+
+/* Section wrapper */
+.page-section {
+  @apply py-16;
+}
+
+/* Intro container */
+.page-section-container {
+  @apply text-center max-w-2xl mx-auto;
+}
+
+/* Main intro title */
+.page-section-title {
+  @apply text-3xl font-serif mb-4;
+  color: var(--color-primary-800);
+}
+
+/* Intro subtitle */
+.page-section-subtitle {
+  @apply text-lg;
+  color: var(--color-primary-600);
+}
+
+/* Card wrapper (form container) */
+.card-wedding {
+  @apply mx-auto rounded-2xl shadow-sm;
+  background-color: var(--color-primary-50);
+}
+
+/* Iframe tweaks */
+.card-wedding iframe {
+  @apply bg-white;
+}
+
+/* Footer note */
+.page-section-note {
+  @apply text-sm text-center mt-8;
+  color: var(--color-primary-700);
+}

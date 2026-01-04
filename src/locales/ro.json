@@ -1,4 +1,35 @@
 {
+    "hero": {
+        "names": "Alexandra & Erik",
+        "subtitle": "vă invită să sărbătoriți nunta lor",
+        "date": "17 iulie 2026",
+        "location": "Mirli, Wiener Wald",
+        "rsvpButton": "Confirmați prezența",
+        "detailsButton": "Vezi detalii"
+    },
+    "countdown": {
+        "title": "Numărăm zilele până la ziua noastră specială",
+        "days": "Zile",
+        "hours": "Ore",
+        "minutes": "Minute",
+        "seconds": "Secunde"
+    },
+    "quickLinks": {
+        "mainTitle": "Tot ce trebuie să știți",
+        "mainDescription": "De la indicații până la codul vestimentar, am inclus toate detaliile",
+        "details": {
+            "title": "Detalii eveniment",
+            "description": "Programul, locația și ce vă puteți aștepta"
+        },
+        "travel": {
+            "title": "Călătorie & cazare",
+            "description": "Cazare, indicații și atracții locale"
+        },
+        "contact": {
+            "title": "Contactați-ne",
+            "description": "Aveți întrebări? Suntem aici să vă ajutăm"
+        }
+    },
   "wedding": {
     "bride": "Alexandra",
     "groom": "Erik",

@@ -1,18 +1,108 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bilbo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bilbo&family=Merienda:wght@300..900&display=swap');
+
+
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer base {
-  body {
-    @apply font-sans text-gray-900 antialiased;
+  :root {
+    /* Typography */
+    --font-heading: 'Merienda', cursive;
+    --font-subheading: 'Merienda', cursive;
+    --font-body: "Montserrat", sans-serif;
+
+    /* Colors (already great 👍) */
+    --color-primary-50:  #f2f6fd;
+    --color-primary-100: #e4edfb;
+    --color-primary-200: #c6d9f6;
+    --color-primary-300: #9fbdec;
+    --color-primary-400: #6e99df;
+    --color-primary-500: #4a7fd4;
+    --color-primary-600: #3566c3;
+    --color-primary-700: #2a519d;
+    --color-primary-800: #243f78;
+    --color-primary-900: #1f335f;
+
+
+    --color-bg: #dde0ee; /* default white for pages */
+
+    --gradient-bg: linear-gradient(
+      to bottom right,
+      var(--color-primary-50),
+      #172dd7,
+      var(--color-primary-100)
+    );
+
+    --gradient-hero: linear-gradient(
+      to bottom right,
+      var(--color-primary-50) 0%,
+      white 50%,
+      #fce7f3 100%
+    );
+
+
+    /* Header theme variables */
+    --header-gradient: linear-gradient(
+    to bottom right,
+    #111827,
+    #7f1d1d,
+    #000000
+    );
+
+    --header-padding-y: 6rem;
+
+    --header-title-color: #ffffff;
+    --header-subtitle-color: #ffe4e6;
+    --header-accent: #6e99df;
+
+
+    /* Navbar / Footer theme */
+    --navbar-bg: #1f2937;           /* dark gray / same as footer */
+    --navbar-text: #ffffff;          /* main link text */
+    --navbar-link-hover: #6e99df;    /* rose-400 hover color */
+    --navbar-link-active: #6e99df;   /* active link color */
+    --navbar-border-active: #6e99df; /* active link bottom border */
+    --navbar-lang-active-bg: #6e99df; /* light rose background for active lang */
+    --navbar-lang-active-border: rgb(105, 142, 233); /* border for active lang */
+    --navbar-lang-inactive-bg: #ffffff; 
+    --navbar-lang-inactive-border: #e5e7eb; /* gray-200 */
+
+    /* Navbar/Footer Theme */
+    --navbar-footer-bg: #1f2937;       /* dark gray */
+    --navbar-footer-text: #ffffff;      /* main text color */
+    --navbar-footer-subtext: #9ca3af;   /* gray-400 for secondary text */
+    --navbar-footer-accent: #6e99df;    /* rose-400 for icons/links */
+    --navbar-footer-accent-hover: #6e99df; /* hover color for links */
+    --navbar-footer-border: #374151;    /* gray-700 for border */
+
   }
-  
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
+body {
+    font-family: var(--font-body);
+    @apply text-gray-900 antialiased;
   }
+
+  h1 {
+    font-family: var(--font-heading);
+  }
+
+  h2,
+  h3 {
+    font-family: var(--font-subheading);
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-body);
+  }
+
+
 }
+
+
 
 @layer components {
   .section-padding {
@@ -22,4 +112,129 @@
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
+  
+  /* Reusable wedding-themed components */
+  .btn-primary {
+    @apply px-8 py-4 rounded-full text-lg font-medium transition-all hover:shadow-2xl hover:scale-105;
+    background-color: var(--color-primary-500);
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--color-primary-600);
+  }
+  
+  .btn-outline {
+    @apply px-8 py-4 rounded-full text-lg font-medium transition-all hover:shadow-lg hover:scale-105 border-2;
+    border-color: var(--color-primary-500);
+    color: var(--color-primary-500);
+    background-color: white;
+  }
+  
+  .btn-outline:hover {
+    background-color: var(--color-primary-50);
+  }
+  
+  .card-wedding {
+    @apply bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 cursor-pointer;
+    border: 1px solid var(--color-primary-100);
+  }
+  
+  .gradient-bg {
+    background: var(--gradient-bg);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .text-primary {
+    color: var(--color-primary-500);
+  }
+  
+  .text-primary-light {
+    color: var(--color-primary-400);
+  }
+  
+  .bg-primary {
+    background-color: var(--color-primary-500);
+  }
+  
+  .bg-primary-light {
+    background-color: var(--color-primary-50);
+  }
+  
+  .border-primary {
+    border-color: var(--color-primary-300);
+  }
+  
+  /* Floating animation elements */
+  .floating-element {
+    @apply absolute rounded-full;
+    background-color: var(--color-primary-300);
+    opacity: 0.2;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  50% {
+    transform: translateY(-40px) translateX(-10px);
+  }
+  75% {
+    transform: translateY(-20px) translateX(5px);
+  }
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out;
+}
+
+.animate-float {
+  animation: float 15s ease-in-out infinite;
 }

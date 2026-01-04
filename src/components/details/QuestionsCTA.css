@@ -1,0 +1,33 @@
+/* QuestionsCTA.css */
+
+.questions-cta-section {
+  @apply py-16;
+}
+
+.questions-cta-container {
+  @apply max-w-4xl mx-auto px-6 text-center;
+}
+
+/* Title */
+.questions-cta-title {
+  @apply text-2xl mb-4;
+  font-family: var(--font-heading);
+  color: var(--color-primary-800);
+}
+
+/* Description */
+.questions-cta-text {
+  @apply mb-6;
+  color: var(--color-primary-600);
+}
+
+/* Email link */
+.questions-cta-link {
+  font-weight: 500;
+  color: var(--color-primary-500);
+  @apply transition-colors;
+}
+
+.questions-cta-link:hover {
+  color: var(--color-primary-400);
+}

@@ -1,0 +1,28 @@
+/* src/components/layout/PageSection.css */
+
+/* Wrapper for any page section */
+.page-section {
+  @apply py-16 px-6 min-h-screen flex flex-col items-center;
+  background-color: var(--color-bg); /* main page background variable */
+}
+
+/* Container for text/content inside section */
+.page-section-container {
+  @apply max-w-4xl mx-auto text-center;
+}
+
+/* Heading style for section titles */
+.page-section-title {
+  font-family: var(--font-heading);
+  @apply text-3xl mb-4 text-gray-800;
+}
+
+/* Subtitle / paragraph text style */
+.page-section-subtitle {
+  @apply text-lg text-gray-600;
+}
+
+/* Optional small note text */
+.page-section-note {
+  @apply text-sm text-gray-500 mt-10;
+}

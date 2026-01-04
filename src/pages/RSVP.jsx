@@ -1,6 +1,8 @@
 import React from "react";
 import { Header } from "@components/layout/Header";
-import { Heart } from "lucide-react";
+import './PageSection.css';
+import './RSVP.css';
+
 
 export default function RSVP() {
   return (
@@ -10,21 +12,20 @@ export default function RSVP() {
         subtitle="We can’t wait to celebrate with you!"
       />
 
-      <section className="bg-rose-50 py-16 px-6 min-h-screen flex flex-col items-center">
+      <section className="page-section">
         {/* Intro text */}
-        <div className="max-w-2xl text-center mb-12">
-          <Heart className="w-10 h-10 text-rose-400 mx-auto mb-4" />
-          <h2 className="text-3xl font-serif text-gray-800 mb-4">
+        <div className="page-section-container mb-12">
+          <h2 className="page-section-title">
             Let us know if you’ll be joining us 💌
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="page-section-subtitle">
             Please take a moment to fill out the form below and share your
             details. It only takes a minute — and means the world to us.
           </p>
         </div>
 
         {/* Embedded Google Form */}
-        <div className="bg-white rounded-2xl shadow-lg overflow-hidden w-full max-w-3xl p-4 md:p-6">
+        <div className="card-wedding w-full max-w-3xl p-4 md:p-6">
           <div className="aspect-[3/2] sm:aspect-[4/3]">
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSfUSC87NKGXXGSvGQsCtbDF92QV4_-6rshGw-Zosvk3Ojc0hg/viewform?embedded=true"
@@ -42,7 +43,7 @@ export default function RSVP() {
         </div>
 
         {/* Optional footer note */}
-        <p className="text-gray-500 text-sm mt-10">
+        <p className="page-section-note">
           Your responses are private and will only be seen by us.
         </p>
       </section>

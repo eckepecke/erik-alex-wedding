@@ -1,0 +1,128 @@
+/* Navigation.css */
+
+/* Navbar wrapper */
+.navbar {
+  background-color: var(--navbar-bg);
+  @apply shadow-md fixed w-full top-0 z-50;
+}
+
+.navbar-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.navbar-inner {
+  @apply flex justify-between items-center h-16;
+}
+
+/* Logo */
+.nav-logo {
+  @apply flex items-center space-x-2;
+}
+
+.nav-logo span {
+  font-family: var(--font-heading);
+  color: var(--navbar-text);
+  @apply text-xl;
+}
+
+.nav-heart {
+  @apply w-6 h-6;
+  color: var(--navbar-text); /* optional variable if needed */
+}
+
+/* Desktop links */
+.nav-links {
+  @apply hidden md:flex space-x-8;
+}
+
+.nav-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s;
+  color: var(--navbar-text);
+}
+
+.nav-link:hover {
+  color: var(--navbar-link-hover);
+}
+
+.nav-link-active {
+  color: var(--navbar-link-active);
+  border-bottom: 2px solid var(--navbar-border-active);
+}
+
+/* Language switcher - desktop */
+.lang-switch {
+  @apply hidden md:flex gap-1;
+}
+
+.lang-btn {
+  @apply flex items-center gap-1.5 px-3 py-1.5 rounded-md border transition-all;
+}
+
+.lang-btn-active {
+  background-color: var(--navbar-lang-active-bg);
+  border-color: var(--navbar-lang-active-border);
+  @apply shadow-sm;
+}
+
+.lang-btn-inactive {
+  background-color: var(--navbar-lang-inactive-bg);
+  border-color: var(--navbar-lang-inactive-border);
+}
+
+/* Mobile menu button */
+.mobile-menu-btn {
+  @apply md:hidden p-2 rounded-md text-gray-600 hover:text-rose-400;
+}
+
+/* Mobile menu */
+.mobile-menu {
+  @apply md:hidden border-t;
+  background-color: var(--navbar-bg);
+}
+
+.mobile-links {
+  @apply px-2 pt-2 pb-3 space-y-1;
+}
+
+.mobile-link {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--navbar-text);
+}
+
+.mobile-link:hover {
+  background-color: var(--navbar-link-hover + '33'); /* slightly transparent */
+}
+
+.mobile-link-active {
+  background-color: var(--navbar-link-active + '22'); /* transparent rose bg */
+  color: var(--navbar-link-active);
+}
+
+/* Mobile language */
+.mobile-lang {
+  @apply px-3 py-2;
+}
+
+.mobile-lang-buttons {
+  @apply flex gap-2;
+}
+
+.mobile-lang-btn {
+  @apply flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg border-2 transition-all;
+}
+
+.mobile-lang-btn-active {
+  background-color: var(--navbar-lang-active-bg);
+  border-color: var(--navbar-lang-active-border);
+}
+
+.mobile-lang-btn-inactive {
+  background-color: var(--navbar-lang-inactive-bg);
+  border-color: var(--navbar-lang-inactive-border);
+}

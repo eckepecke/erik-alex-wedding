@@ -1,0 +1,88 @@
+/* Footer.css */
+
+.footer {
+  background-color: var(--navbar-footer-bg);
+  color: var(--navbar-footer-text);
+  @apply py-12;
+}
+
+.footer-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.footer-grid {
+  @apply grid md:grid-cols-3 gap-8;
+}
+
+/* Contact section */
+.footer-contact {
+  @apply text-center md:text-left;
+}
+
+.footer-contact h3 {
+  @apply text-lg font-semibold mb-4;
+  color: var(--navbar-footer-text);
+}
+
+.footer-contact-info {
+  @apply flex items-center justify-center md:justify-start gap-2;
+  color: var(--navbar-footer-accent);
+}
+
+.footer-contact-info a {
+  color: var(--navbar-footer-accent);
+  &:hover {
+    color: var(--navbar-footer-accent-hover);
+  }
+}
+
+/* Center section */
+.footer-center {
+  @apply text-center;
+}
+
+.footer-heart {
+  @apply w-8 h-8 mx-auto mb-4;
+  color: white;
+}
+
+.footer-center p {
+  color: var(--navbar-footer-subtext);
+}
+
+.footer-center .footer-date {
+  @apply text-sm mt-2;
+  color: var(--navbar-footer-subtext);
+}
+
+/* Social section */
+.footer-social {
+  @apply text-center md:text-right;
+}
+
+.footer-social h3 {
+  @apply text-lg font-semibold mb-4;
+  color: var(--navbar-footer-text);
+}
+
+.footer-social-links {
+  @apply flex justify-center md:justify-end gap-4;
+}
+
+.footer-social-links a {
+  color: var(--navbar-footer-accent);
+  &:hover {
+    color: var(--navbar-footer-accent-hover);
+  }
+}
+
+.footer-social-links svg {
+  @apply w-6 h-6;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  @apply mt-8 pt-8 text-center text-sm;
+  border-top: 1px solid var(--navbar-footer-border);
+  color: var(--navbar-footer-subtext);
+}

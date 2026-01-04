@@ -1,0 +1,69 @@
+/* Travel.css */
+
+/* Card wrapper */
+.travel-card {
+  @apply mb-8;
+}
+
+/* Section titles with icon */
+.travel-card h2 {
+  @apply text-2xl font-serif;
+  color: var(--color-primary-800);
+}
+
+/* Icons */
+.travel-card .icon {
+  @apply w-10 h-10 flex-shrink-0;
+  color: var(--color-primary-500);
+}
+
+/* General text */
+.travel-card p {
+  @apply mb-3;
+  color: var(--color-primary-600);
+}
+
+/* Lists */
+.travel-card ul {
+  @apply list-disc pl-5;
+}
+
+.travel-card li {
+  color: var(--color-primary-600);
+}
+
+.travel-card li strong {
+  color: var(--color-primary-700);
+}
+
+/* Section spacing tweaks */
+.travel-card > div:first-child {
+  @apply mb-4;
+}
+
+/* Sub-headings inside cards (hotels, etc.) */
+.travel-card h3 {
+  @apply text-lg font-medium mb-1;
+  color: var(--color-primary-700);
+}
+
+/* Links (email addresses) */
+.travel-card a {
+  @apply underline;
+  color: var(--color-primary-500);
+}
+
+.travel-card a:hover {
+  color: var(--color-primary-600);
+}
+
+/* Optional info box style (if you add notes later) */
+.travel-note {
+  @apply p-4 rounded-lg mt-4;
+  background-color: var(--color-primary-50);
+}
+
+.travel-note p {
+  @apply text-sm;
+  color: var(--color-primary-700);
+}

@@ -1,0 +1,59 @@
+/* InfoCards.css */
+
+/* Grid wrapper */
+.info-cards-grid {
+  @apply grid md:grid-cols-3 gap-8 mb-16;
+}
+
+/* Card wrapper - all cards share the same text-center style */
+.info-card {
+  @apply text-center;
+}
+
+/* Icon inside card */
+.info-card-icon {
+  @apply w-12 h-12 mx-auto mb-4;
+  color: var(--color-primary-500); /* rose-400 equivalent */
+}
+
+/* Card title */
+.info-card-title {
+  @apply text-xl font-semibold mb-2;
+  color: var(--color-primary-800); /* dark text */
+}
+
+/* Card main text */
+.info-card-text {
+  color: var(--color-primary-600); /* gray-600 */
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Card secondary text */
+.info-card-text-sm {
+  @apply text-sm mt-2;
+  color: var(--color-primary-500); /* rose for links */
+}
+
+.info-card-link {
+  color: var(--color-primary-500);
+  @apply text-sm mt-2 inline-block transition-colors;
+}
+
+.info-card-link:hover {
+  color: var(--color-primary-400); /* hover rose */
+}
+
+/* Schedule list inside card */
+.info-card-schedule {
+  @apply space-y-1 mt-2;
+}
+
+.info-card-schedule p {
+  color: var(--color-primary-600);
+  font-size: 0.875rem; /* text-sm */
+}
+
+.info-card-schedule p span {
+  font-weight: 500;
+}

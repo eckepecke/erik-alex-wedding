@@ -14,57 +14,60 @@ export const InfoCards = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="info-cards-grid">
-      <Card className="info-card detail-card" hover>
-        <Calendar className="info-card-icon" />
-        <h3 className="info-card-title">{t('details.infoCards.when')}</h3>
-        <p className="info-card-text">{weddingInfo.date}</p>
-        <p className="info-card-text">{weddingInfo.time}</p>
-        <p className="info-card-text-sm">{t('details.infoCards.ceremonyPrompt')}</p>
-      </Card>
+ <div className="info-cards-grid">
+  <Card className="info-card" hover>
+    <Calendar className="info-card-icon" />
+    <h3 className="info-card-title">{t('details.infoCards.when')}</h3>
+    <p className="info-card-text">{weddingInfo.date}</p>
+    <p className="info-card-text">{weddingInfo.time}</p>
+    <p className="info-card-text-sm">{t('details.infoCards.ceremonyPrompt')}</p>
+  </Card>
 
-      <Card className="info-card detail-card" hover>
-        <MapPin className="info-card-icon" />
-        <h3 className="info-card-title">{t('details.infoCards.where')}</h3>
-        <p className="info-card-text">{weddingInfo.venue.name}</p>
-        <p className="info-card-text-sm">{weddingInfo.venue.address}</p>
-        <p className="info-card-text-sm">{weddingInfo.venue.city}</p>
-        <a 
-          href={`https://maps.google.com/?q=${encodeURIComponent(weddingInfo.venue.name)}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="info-card-link"
-        >
-          {t('details.infoCards.getDirections')} →
-        </a>
-      </Card>
+  <Card className="info-card" hover>
+    <MapPin className="info-card-icon" />
+    <h3 className="info-card-title">{t('details.infoCards.where')}</h3>
+    <p className="info-card-text">{weddingInfo.venue.name}</p>
+    <p className="info-card-text-sm">{weddingInfo.venue.address}</p>
+    <p className="info-card-text-sm">{weddingInfo.venue.city}</p>
+    <a 
+      href={`https://maps.google.com/?q=${encodeURIComponent(weddingInfo.venue.name)}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="info-card-link"
+    >
+      {t('details.infoCards.getDirections')} →
+    </a>
+  </Card>
 
-    <Card className="info-card detail-card" hover>
-        <Clock className="info-card-icon" />
-        <h3 className="info-card-title">
-            {t('details.infoCards.schedule')}
-        </h3>
+  {/* Simple vertical schedule list */}
+  <div className="info-card-schedule-wrapper">
+    <Card className="info-card" hover>
+      <Clock className="info-card-icon" />
+      <h3 className="info-card-title">{t('details.infoCards.schedule')}</h3>
+      {schedule.date && <p className="info-card-date">{schedule.date}</p>}
 
-        {schedule.date && (
-            <p className="info-card-date">{schedule.date}</p>
-        )}
-
-        <div className="info-card-schedule">
-            {items.map((item, idx) => (
-            <div key={idx} className="schedule-item">
-                <p className="schedule-time">{item.time}</p>
-                <p className="schedule-title">{item.title}</p>
-
-                {item.description && (
-                <p className="schedule-description">
-                    {item.description}
-                </p>
-                )}
+      <div className="schedule-list">
+        {items.map((item, idx) => (
+          <div key={idx} className="schedule-item">
+            <div className="schedule-time">
+              {item.time}
             </div>
-            ))}
-        </div>
+            <div className="schedule-content">
+              <div className="schedule-title">
+                {item.title}
+              </div>
+              {item.description && (
+                <div className="schedule-description">
+                  {item.description}
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
     </Card>
+  </div>
+</div>
 
-    </div>
   );
 };

@@ -8,6 +8,7 @@ import { Gifts } from '../components/details/Gifts';
 import { ImportantNotes } from '../components/details/ImportantNotes';
 import { QuestionsCTA } from '../components/details/QuestionsCTA';
 import { useTranslation } from '../hooks/useTranslations';
+import './PageSection.css';
 
 
 const Details = () => {
@@ -15,10 +16,12 @@ const Details = () => {
 
   return (
     <>
+
       <Header 
         title={t('details.title')} 
         subtitle={t('details.subtitle')}
       />
+
     <div className="page-section"> {/* Full-width background wrapper */}
 
       <div className="container-custom py-16">
@@ -28,12 +31,14 @@ const Details = () => {
         <Photography />
         <Gifts />
       </div>
-    </div>
-
 
       <ImportantNotes />
       <QuestionsCTA />
+    </div>
+
+
     </>
+
   );
 };
 

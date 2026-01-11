@@ -1,4 +1,6 @@
+/* WeddingInvitationPopup.css */
 
+/* Overlay */
 .popup-overlay {
   position: fixed;
   inset: 0;
@@ -12,171 +14,223 @@
 }
 
 .popup-overlay.visible {
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
 }
 
+/* Card container */
+/* Card container */
 .popup-container {
-  position: relative;
-  background-color: white;
-  border-radius: 0.5rem;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   max-width: 42rem;
-  width: 100%;
+  width: 90vw;
+  border-radius: 0.25rem; /* less rounded than before */
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+  overflow: hidden;
   transition: all 0.5s ease;
   opacity: 0;
   transform: scale(0.9);
+  padding: 2rem; /* padding for desktop */
+  background-color: white;
 }
+
+/* Inner wrapper keeps same rounding as container for consistency */
+.popup-inner {
+  position: relative;
+  border-radius: 0.25rem; /* match the container */
+  overflow: hidden;
+  min-height: 600px;
+}
+
+/* Small screens: remove padding but keep border-radius */
+@media (max-width: 640px) {
+  .popup-container {
+    padding: 0; /* remove desktop padding */
+    width: 100vw; /* fill viewport */
+    border-radius: 0.25rem; /* keep the rounded corners consistent */
+  }
+
+  .popup-inner {
+    border-radius: 0.25rem; /* inner matches outer */
+  }
+
+  .popup-content {
+    padding: 1.5rem; /* some inner spacing */
+    min-height: 400px;
+  }
+}
+
 
 .popup-container.visible {
   opacity: 1;
   transform: scale(1);
 }
 
+/* Background image */
+.popup-background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Gradient overlay */
+.popup-overlay-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.0.02) 0%,
+    rgba(0,0,0,0.08) 50%,
+    rgba(0,0,0,0.12) 100%
+  );
+  z-index: 1;
+}
+
+/* Close button */
 .popup-close {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  color: #9ca3af;
-  background: none;
+  color: white;
+  background: rgba(0,0,0,0.3);
   border: none;
   cursor: pointer;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
   padding: 0.5rem;
+  border-radius: 50%;
+  z-index: 10;
+  backdrop-filter: blur(3px);
 }
 
 .popup-close:hover {
-  color: #4b5563;
+  background: rgba(0,0,0,0.5);
+  transform: rotate(90deg);
 }
 
+/* Content */
 .popup-content {
-  padding: 3rem;
+  position: relative;
+  z-index: 2;
+  padding: 2.5rem 2rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 400px;
+  color: rgb(27, 25, 22);
+  font-family: "Georgia", serif;
 }
 
+/* Dividers */
 .popup-divider {
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
 }
-
 .popup-divider::before {
   content: '';
   width: 6rem;
   height: 1px;
-  background: linear-gradient(to right, transparent, var(--color-primary-400), transparent);
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.7), transparent);
 }
-
 .popup-divider.bottom {
-  margin-top: 0;
   margin-bottom: 1.5rem;
 }
 
+/* Names */
 .popup-names {
   margin-bottom: 2rem;
 }
-
 .popup-name {
+  font-family: "Cormorant Garamond", "Playfair Display", serif;
   font-size: 2.5rem;
-  font-family: serif;
-  color: #1f2937;
-  margin-bottom: 0.5rem;
+  margin: 0.25rem 0;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
 }
-
 .popup-ampersand {
-  font-size: 1.875rem;
-  color: var(--color-primary-400);
-  font-family: serif;
-  margin: 1rem 0;
+    font-family: "Great Vibes", cursive;
+    font-size: 2rem;
+    color: #ff8c42; /* warm orange accent */
 }
 
+/* Invitation text */
 .popup-invitation {
   font-size: 1.125rem;
-  color: #4b5563;
-  margin-bottom: 2rem;
   font-weight: 300;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.03em;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.25);
 }
 
+/* Date & time */
 .popup-datetime {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
-
 .popup-date {
   font-size: 1.5rem;
-  font-family: serif;
-  color: #1f2937;
-  margin-bottom: 0.5rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
 }
-
 .popup-time {
   font-size: 1.25rem;
-  color: #4b5563;
+  font-weight: 400;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.25);
 }
 
+/* Location */
 .popup-location {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
-
 .popup-at {
-  font-size: 1.125rem;
-  color: #4b5563;
+  font-size: 1rem;
+  font-weight: 400;
   margin-bottom: 0.25rem;
 }
-
 .popup-venue {
   font-size: 1.5rem;
-  font-family: serif;
-  color: #1f2937;
+  font-weight: 500;
 }
-
 .popup-address {
   font-size: 1rem;
-  color: #6b7280;
-  margin-top: 0.25rem;
 }
 
+/* RSVP and enter button */
 .popup-rsvp {
   font-size: 0.875rem;
-  color: #6b7280;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 1.5rem;
 }
-
 .popup-enter-btn {
-  margin-top: 2rem;
-  padding: 0.75rem 2rem;
-  background-color: var(--color-primary-400);
-  color: white;
+  margin-top: 1.5rem;
+  padding: 0.6rem 2rem;
   border-radius: 9999px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  background-color: rgba(255,255,255,0.85);
+  color: #1f2937;
   border: none;
   cursor: pointer;
-  font-weight: 300;
-  letter-spacing: 0.025em;
-  transition: background-color 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
 }
-
 .popup-enter-btn:hover {
-  background-color: var(--color-primary-500);
+  background-color: rgba(255,255,255,1);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
 
 /* Responsive adjustments */
-@media (min-width: 768px) {
-  .popup-name {
-    font-size: 3rem;
-  }
-}
-
 @media (max-width: 640px) {
-  .popup-content {
-    padding: 2rem;
-  }
-  
-  .popup-name {
-    font-size: 2rem;
-  }
-  
-  .popup-date {
-    font-size: 1.25rem;
-  }
+  .popup-container { padding: 1.25rem; }
+  .popup-content { padding: 2rem 1rem; min-height: 400px; }
+  .popup-name { font-size: 1.75rem; }
+  .popup-ampersand { font-size: 1.5rem; }
+  .popup-date { font-size: 1.125rem; }
+  .popup-time { font-size: 1rem; }
+  .popup-invitation { margin-bottom: 1rem; }
+  .popup-datetime { margin-bottom: 1rem; }
+  .popup-location { margin-bottom: 1rem; }
 }

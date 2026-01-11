@@ -1,52 +1,46 @@
-/* InfoCards.css */
+/* InfoCards.css - Updated schedule section */
 
-/* Grid wrapper */
+/* Grid wrapper remains the same */
 .info-cards-grid {
   @apply grid gap-8 mb-16;
-  grid-template-columns: repeat(1, minmax(0, 1fr)); /* default 1 column for small screens */
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-@media (min-width: 768px) { /* md: */
+@media (min-width: 768px) {
   .info-cards-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-auto-rows: auto;
   }
 
-  /* Make the schedule card span both columns */
   .info-card-schedule-wrapper {
     grid-column: span 2;
   }
 }
 
-/* Card wrapper - all cards share the same text-center style */
+/* Card styles remain the same */
 .info-card {
   @apply text-center;
-  background-color: white;
 }
 
-/* Icon inside card */
 .info-card-icon {
   @apply w-12 h-12 mx-auto mb-4;
-  color: var(--color-primary-800); /* rose-400 equivalent */
+  color: var(--color-primary-800);
 }
 
-/* Card title */
 .info-card-title {
   @apply text-xl font-semibold mb-2;
-  color: var(--color-primary-800); /* dark text */
+  color: var(--color-primary-800);
 }
 
-/* Card main text */
 .info-card-text {
-  color: var(--color-primary-800); /* gray-600 */
+  color: var(--color-primary-800);
   font-weight: 500;
   margin: 0;
 }
 
-/* Card secondary text */
 .info-card-text-sm {
   @apply text-sm mt-2;
-  color: var(--color-primary-800); /* rose for links */
+  color: var(--color-primary-800);
 }
 
 .info-card-link {
@@ -55,44 +49,38 @@
 }
 
 .info-card-link:hover {
-  color: var(--color-primary-400); /* hover rose */
+  color: var(--color-primary-400);
 }
 
-/* Schedule list inside card - NEW MENU STYLE */
+/* Updated schedule list for time on top */
 .schedule-list {
-  @apply space-y-3 mt-4;
+  @apply space-y-6 mt-6; /* Increased spacing between items */
 }
 
 .schedule-item {
-  @apply flex gap-4 py-3 border-b;
+  @apply py-4 px-6 border-b border-gray-100; /* Added horizontal padding */
 }
 
 .schedule-item:last-child {
   @apply border-b-0;
 }
 
+/* Time now on top, centered */
 .schedule-time {
-  @apply font-semibold;
-  width: 80px;
-  min-width: 80px;
-  max-width: 80px;
+  @apply font-semibold text-lg mb-2 text-center;
   color: var(--color-primary-700);
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
 .schedule-content {
-  @apply flex-1;
+  @apply text-center;
 }
 
 .schedule-title {
-  @apply font-medium;
+  @apply font-medium text-lg;
   color: var(--color-primary-900);
-  text-align: left;
 }
 
 .schedule-description {
-  @apply text-sm mt-1;
+  @apply text-base mt-2;
   color: var(--color-primary-600);
-  text-align: left;
 }

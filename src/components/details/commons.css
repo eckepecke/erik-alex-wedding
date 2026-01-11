@@ -1,18 +1,21 @@
 /* commons.css */
 
 .detail-card {
-    background-color: var(--card-color-dark) !important;
+    background-color: var(--card-color-light) !important;
 }
+/* .detail-card:hover {
+    background-color: var(--card-color-hover) !important;
+} */
 
 /* Card title */
 .detail-item-title {
   @apply text-2xl font-serif mb-4 flex items-center gap-3;
-  color: var(--color-primary-50, #1f2937); /* fallback if needed */
+  color: var(--color-primary-700, #1f2937); /* fallback if needed */
 }
 
 .detail-item-subtitle {
   @apply text-lg font-medium mb-2;
-  color: var(--color-primary-50); /* slightly lighter */
+  color: var(--color-primary-600); /* slightly lighter */
 }
 
 
@@ -20,20 +23,20 @@
 /* Icon inside title */
 .detail-item-icon {
   @apply w-8 h-8;
-  color: white; /* rose-400 equivalent */
+  color: var(--color-primary-600); /* rose-400 equivalent */
 }
 
 /* Paragraph text */
 .detail-item-text, .detail-item-paragraph {
   @apply mb-3;
   @apply flex-grow;
-  color: var(--color-primary-50); /* gray-900 equivalent */
+  color: var(--color-primary-500); /* gray-900 equivalent */
 }
 
 /* List */
 .detail-item-list {
   @apply space-y-2 text-sm;
-  color: var(--color-primary-50); /* gray-900 equivalent */
+  color: var(--color-primary-500); /* gray-900 equivalent */
 }
 
 .detail-item-list li::marker {
@@ -44,3 +47,5 @@
   @apply mb-4;
   color: var(--color-primary-900); /* gray-600 */
 }
+
+

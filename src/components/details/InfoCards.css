@@ -20,27 +20,28 @@
 /* Card styles remain the same */
 .info-card {
   @apply text-center;
+  background-color: var(--color-primary-600)
 }
 
 .info-card-icon {
   @apply w-12 h-12 mx-auto mb-4;
-  color: var(--color-primary-800);
+  color: var(--color-primary-700);
 }
 
 .info-card-title {
   @apply text-xl font-semibold mb-2;
-  color: var(--color-primary-800);
+  color: var(--color-primary-700);
 }
 
 .info-card-text {
-  color: var(--color-primary-800);
+  color: var(--color-primary-600);
   font-weight: 500;
   margin: 0;
 }
 
 .info-card-text-sm {
   @apply text-sm mt-2;
-  color: var(--color-primary-800);
+  color: var(--color-primary-500);
 }
 
 .info-card-link {
@@ -68,7 +69,8 @@
 /* Time now on top, centered */
 .schedule-time {
   @apply font-semibold text-lg mb-2 text-center;
-  color: var(--color-primary-700);
+  color: var(--color-primary-800);
+  font-size:large;
 }
 
 .schedule-content {
@@ -77,10 +79,10 @@
 
 .schedule-title {
   @apply font-medium text-lg;
-  color: var(--color-primary-900);
+  color: var(--color-primary-700);
 }
 
 .schedule-description {
   @apply text-base mt-2;
-  color: var(--color-primary-600);
+  color: var(--color-primary-500);
 }

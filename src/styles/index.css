@@ -27,11 +27,13 @@
     --color-primary-900: #1f335f;
 
 
-    --color-bg-white: #deeaff; /* default white for pages */
+    --color-bg-white: #fafbfc; /* default white for pages */
     --color-bg-blue: #6e99df; /* default white for pages */
 
     --card-color-dark: #6e99df;
-    --card-color-light: rgb(229, 229, 252);
+    --card-color-light: #e4edfb;
+    --card-color-hover: #d4e3f8;
+
 
 
 

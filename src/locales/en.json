@@ -108,29 +108,17 @@
       "getDirections": "Get Directions"
     },
 
-    "ceremonyReception": {
-      "ceremony": "Ceremony",
-      "reception": "Reception",
-      "ceremonyDescription": "Our ceremony will take place at {venueName} in Wiener Wald. The outdoor setting provides a romantic backdrop as we exchange our vows.",
-      "receptionDescription": "Following the ceremony, join us for cocktails, dinner, and dancing under the stars in the palace ballroom.",
-      "duration": "Duration: Approximately 30 minutes",
-      "seating": "Seating will be provided",
-      "weatherBackup": "Weather backup plan in place",
-      "unplugged": "Unplugged ceremony (no phones please)",
-      "welcomeDrinks": "Welcome drinks & canapés",
-      "dinner": "Three-course seated dinner",
-      "openBar": "Open bar all evening",
-      "liveMusic": "Live band & DJ",
-      "lateSnacks": "Late night snacks"
-    },
 
   "dressCode": {
     "title": "Dress Code",
     "attire": "Formal Attire",
+    "inspiration": "inspiration text",
     "description": "Our celebration will take place in the countryside, surrounded by nature, and we would love for your outfits to reflect this romantic setting while remaining elegant and festive.\n\nGentlemen are kindly asked to wear a suit.\n\nLadies are invited to wear a long dress; knee-length dresses are also welcome. Please do not wear short dresses or dresses in red, white, or black.\n\nWe would love to see soft, summery, warm colors that complement the setting and the atmosphere of our day.\nYou will find some color inspiration in the pictures below.",
     "noteStrong": "Please note:",
-    "noteText": "We kindly request that guests refrain from wearing white, cream, or ivory to allow our bride to shine."
-    },
+    "noteText": "We kindly request that guests refrain from wearing white, cream, or ivory to allow our bride to shine.",
+    "dresses": "Ladies are invited to wear a long dress; knee-length dresses are also welcome. Please do not wear short dresses or dresses in red, white, or black.",
+    "suits": "Gentlemen are kindly asked to wear a suit."
+},
 
   "photography": {
       "title": "Photography",

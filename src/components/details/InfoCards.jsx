@@ -14,7 +14,7 @@ export const InfoCards = () => {
   return (
     <div className="info-cards-grid">
       {/* When card */}
-      <Card className="info-card" hover>
+      <Card className="info-card detail-card" hover>
         <Calendar className="info-card-icon" />
         <h3 className="info-card-title">{t('details.infoCards.when')}</h3>
         <p className="info-card-text">{weddingInfo.date}</p>
@@ -23,10 +23,10 @@ export const InfoCards = () => {
       </Card>
 
       {/* Where card */}
-      <Card className="info-card" hover>
+      <Card className="info-card detail-card" hover>
         <MapPin className="info-card-icon" />
         <h3 className="info-card-title">{t('details.infoCards.where')}</h3>
-        <p className="info-card-text">{weddingInfo.venue.name}</p>
+        <p className="detail-item-text">{weddingInfo.venue.name}</p>
         <p className="info-card-text-sm">{weddingInfo.venue.address}</p>
         <p className="info-card-text-sm">{weddingInfo.venue.city}</p>
         <a 
@@ -41,7 +41,7 @@ export const InfoCards = () => {
 
       {/* Schedule card with time on top */}
       <div className="info-card-schedule-wrapper">
-        <Card className="info-card" hover>
+        <Card className="info-card detail-card" hover>
           <Clock className="info-card-icon" />
           <h3 className="info-card-title">{t('details.infoCards.schedule')}</h3>
           {schedule.date && <p className="info-card-text mt-2">{schedule.date}</p>}

@@ -2,7 +2,12 @@
 
 .header {
   padding: var(--header-padding-y) 0;
-  background-color:#6e99df;
+  /* background-color:#6e99df; */
+    /* GLOBAL background image */
+  background-image: url('/assets/wienerwald.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .header-inner {

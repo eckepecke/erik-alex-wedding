@@ -3,7 +3,7 @@ import { Card } from '../ui/Card';
 import { Shirt } from 'lucide-react';
 import { useTranslation } from '../../hooks/useTranslations';
 import './DressCode.css';
-import './commons.css';
+import '../../pages/commons.css';
 
 const dressImages = [
   '/assets/dress-1.jpeg',
@@ -23,16 +23,13 @@ export const DressCode = () => {
   const { t } = useTranslation();
 
   return (
-    <Card className="dresscode-card detail-card">
-      <div className="dresscode-content">
-        <div className="dresscode-icon detail-item-icon">
-          <Shirt />
+    <Card className="detail-card">
+        <div className="flex items-center gap-4 mb-6">
+            <Shirt className="detail-item-icon" />
+            <h2>{t('details.dressCode.title')}</h2>
         </div>
 
         <div className="detail-item-text">
-          <h3 className="detail-item-title">
-            {t('details.dressCode.title')}
-          </h3>
 
           <p className="detail-item-subtitle">
             {t('details.dressCode.attire')}
@@ -51,25 +48,16 @@ export const DressCode = () => {
 
           {/* Inspiration gallery */}
           <div className="dresscode-gallery">
-            <h4 className="dresscode-gallery-title">
-              {t('details.dressCode.inspiration')}
-            </h4>
 
             <div className="dresscode-gallery-group">
-              <span className="dresscode-gallery-label">
-                {t('details.dressCode.dresses')}
-              </span>
+
               <div className="dresscode-gallery-grid">
                 {dressImages.map((src) => (
                   <img key={src} src={src} alt="Dress inspiration" />
                 ))}
               </div>
             </div>
-
             <div className="dresscode-gallery-group">
-              <span className="dresscode-gallery-label">
-                {t('details.dressCode.suits')}
-              </span>
               <div className="dresscode-gallery-grid">
                 {suitImages.map((src) => (
                   <img key={src} src={src} alt="Suit inspiration" />
@@ -78,7 +66,6 @@ export const DressCode = () => {
             </div>
           </div>
         </div>
-      </div>
     </Card>
   );
 };

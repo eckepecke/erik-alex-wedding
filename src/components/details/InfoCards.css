@@ -20,12 +20,11 @@
 /* Card styles remain the same */
 .info-card {
   @apply text-center;
-  background-color: var(--color-primary-600)
 }
 
 .info-card-icon {
   @apply w-12 h-12 mx-auto mb-4;
-  color: var(--color-primary-700);
+  color: var(--color-primary-600);
 }
 
 .info-card-title {
@@ -41,11 +40,11 @@
 
 .info-card-text-sm {
   @apply text-sm mt-2;
-  color: var(--color-primary-500);
+  color: var(--color-primary-600);
 }
 
 .info-card-link {
-  color: var(--color-primary-500);
+  color: var(--color-primary-700);
   @apply text-sm mt-2 inline-block transition-colors;
 }
 
@@ -84,5 +83,6 @@
 
 .schedule-description {
   @apply text-base mt-2;
-  color: var(--color-primary-500);
+  color: var(--color-primary-600);
+  text-align: center;
 }

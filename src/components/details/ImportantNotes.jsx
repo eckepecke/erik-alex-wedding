@@ -1,6 +1,8 @@
 import React from 'react';
 import { useTranslation } from '../../hooks/useTranslations';
 import './ImportantNotes.css';
+import '../../pages/commons.css';
+
 
 export const ImportantNotes = () => {
   const { t } = useTranslation();

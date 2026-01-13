@@ -4,7 +4,7 @@ import { Music, Utensils } from 'lucide-react';
 import { useWeddingInfo } from '../../hooks/useWeddingInfo';
 import { useTranslation } from '../../hooks/useTranslations';
 import './CeremonyReception.css';
-import './commons.css';
+import '../../pages/commons.css';
 
 
 export const CeremonyReception = () => {

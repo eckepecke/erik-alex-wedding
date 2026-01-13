@@ -34,8 +34,7 @@
     --card-color-light: #e4edfb;
     --card-color-hover: #d4e3f8;
 
-
-
+    --error-500: rgb(122, 0, 0);
 
     --gradient-bg: linear-gradient(
       to bottom right,

@@ -28,10 +28,10 @@
   font-weight: 600;
 }
 
-.dresscode-icon svg {
+/* .dresscode-icon svg {
   @apply w-10 h-10;
   @apply flex-shrink-0;
-}
+} */
 
 .dresscode-gallery {
   margin-top: 1.5rem;

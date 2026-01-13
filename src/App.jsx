@@ -1,7 +1,7 @@
 // ============================================
 // src/App.jsx
 // ============================================
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { TranslationProvider } from './hooks/useTranslations.jsx';
 import { Navigation } from './components/layout/Navigation';
@@ -14,6 +14,7 @@ import Details from './pages/Details';
 import RSVP from './pages/RSVP';
 import Travel from './pages/Travel';
 
+import { PasswordGate } from './components/PasswordGate/PasswordGate';
 
 
 function ScrollToTop() {
@@ -22,6 +23,22 @@ function ScrollToTop() {
 }
 
 function App() {
+
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+    useEffect(() => {
+    const auth = sessionStorage.getItem('wedding_auth');
+    if (auth === 'true') setIsAuthenticated(true);
+    }, []);
+
+    if (!isAuthenticated) {
+    return <PasswordGate onAuthenticate={() => {
+        setIsAuthenticated(true);
+        sessionStorage.setItem('wedding_auth', 'true');
+    }} />;
+    }
+
+// Your normal router content...
   return (
     <TranslationProvider> {/* Add this wrapper */}
       <Router>
@@ -34,12 +51,6 @@ function App() {
               <Route path="/details" element={<Details />} />
               <Route path="/rsvp" element={<RSVP />} />
               <Route path="/travel" element={<Travel />} />
-
-
-
-            {/* Uncomment as you create these pages
-            <Route path="/registry" element={<Registry />} />
-            */}
             </Routes>
           </main>
           <Footer />

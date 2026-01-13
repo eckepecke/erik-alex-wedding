@@ -14,7 +14,7 @@
 /* Icons */
 .travel-card .icon {
   @apply w-10 h-10 flex-shrink-0;
-  color: var(--color-primary-500);
+  color: var(--color-primary-600);
 }
 
 /* General text */

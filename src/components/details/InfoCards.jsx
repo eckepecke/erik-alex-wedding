@@ -4,7 +4,8 @@ import { Calendar, MapPin, Clock } from 'lucide-react';
 import { useWeddingInfo } from '../../hooks/useWeddingInfo';
 import { useTranslation } from '../../hooks/useTranslations';
 import './InfoCards.css';
-import './commons.css';
+import '../../pages/commons.css';
+
 
 export const InfoCards = () => {
   const { weddingInfo, schedule } = useWeddingInfo();
@@ -14,7 +15,7 @@ export const InfoCards = () => {
   return (
     <div className="info-cards-grid">
       {/* When card */}
-      <Card className="info-card detail-card" hover>
+      <Card className="info-card detail-card">
         <Calendar className="info-card-icon" />
         <h3 className="info-card-title">{t('details.infoCards.when')}</h3>
         <p className="info-card-text">{weddingInfo.date}</p>
@@ -23,7 +24,7 @@ export const InfoCards = () => {
       </Card>
 
       {/* Where card */}
-      <Card className="info-card detail-card" hover>
+      <Card className="info-card detail-card">
         <MapPin className="info-card-icon" />
         <h3 className="info-card-title">{t('details.infoCards.where')}</h3>
         <p className="detail-item-text">{weddingInfo.venue.name}</p>
@@ -41,7 +42,7 @@ export const InfoCards = () => {
 
       {/* Schedule card with time on top */}
       <div className="info-card-schedule-wrapper">
-        <Card className="info-card detail-card" hover>
+        <Card className="info-card detail-card">
           <Clock className="info-card-icon" />
           <h3 className="info-card-title">{t('details.infoCards.schedule')}</h3>
           {schedule.date && <p className="info-card-text mt-2">{schedule.date}</p>}

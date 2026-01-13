@@ -1,6 +1,7 @@
 import React from 'react';
 import { WEDDING_INFO } from '@utils/constants';
-import './QuestionsCTA.css';
+import './QuestionsCTA.css'
+import '../../pages/commons.css';
 
 export const QuestionsCTA = () => {
   return (

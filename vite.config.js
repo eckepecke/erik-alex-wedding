@@ -6,7 +6,9 @@ import { fileURLToPath } from 'url'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
-  base: '/erik-alex-wedding/',
+  base: process.env.NODE_ENV === 'production'
+    ? '/erik-alex-wedding/'
+    : '/',
   plugins: [react()],
   resolve: {
     alias: {

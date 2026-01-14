@@ -10,7 +10,7 @@ export function PasswordGate({ onAuthenticate }) {
   const [error, setError] = useState(false);
   const [isShaking, setIsShaking] = useState(false);
 
-  const CORRECT_PASSWORD = 'Koopa'; // Change this!
+  const CORRECT_PASSWORD = import.meta.env.VITE_PASSWORD;
 
   const handleSubmit = (e) => {
     e.preventDefault();

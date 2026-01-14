@@ -18,6 +18,7 @@ const Home = () => {
           className={`w-full h-full object-cover transition-opacity duration-1000 ${
             imageLoaded ? 'opacity-100' : 'opacity-0'
           }`}
+          style={{ objectPosition: '42% center' }}
           onLoad={() => setImageLoaded(true)}
         />
         <div className="absolute inset-0 home-bg-overlay" />

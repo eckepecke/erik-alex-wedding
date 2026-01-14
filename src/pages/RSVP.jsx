@@ -5,6 +5,8 @@ import './RSVP.css';
 
 
 export default function RSVP() {
+  const FORM_URL = import.meta.env.VITE_FORM_URL;
+
   return (
     <>
       <Header
@@ -28,7 +30,7 @@ export default function RSVP() {
         <div className="card-wedding w-full max-w-3xl p-4 md:p-6">
           <div className="aspect-[3/2] sm:aspect-[4/3]">
             <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSfUSC87NKGXXGSvGQsCtbDF92QV4_-6rshGw-Zosvk3Ojc0hg/viewform?embedded=true"
+              src={FORM_URL}
               width="100%"
               height="100%"
               frameBorder="0"

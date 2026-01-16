@@ -14,12 +14,6 @@ export const Hero = () => {
     <section className="hero-section">
       {/* Main content */}
       <div className="hero-content">
-        {/* Decorative top flourish */}
-        {/* <div className="hero-flourish-top">
-          <div className="flourish-line"></div>
-          <Heart className="hero-heart" fill="currentColor" />
-          <div className="flourish-line-reverse"></div>
-        </div> */}
 
         {/* Names */}
         <div className="hero-names">
@@ -64,13 +58,6 @@ export const Hero = () => {
             </button>
           </Link>
         </div>
-
-        {/* Decorative bottom flourish */}
-        {/* <div className="hero-flourish-bottom">
-          <div className="flourish-line"></div>
-          <Heart className="hero-heart-small" fill="currentColor" />
-          <div className="flourish-line-reverse"></div>
-        </div> */}
       </div>
     </section>
   );

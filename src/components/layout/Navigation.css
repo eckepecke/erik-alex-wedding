@@ -73,7 +73,11 @@
 
 /* Mobile menu button */
 .mobile-menu-btn {
-  @apply md:hidden p-2 rounded-md text-gray-600 hover:text-rose-400;
+  @apply md:hidden p-2 rounded-md;
+  color: var(--color-primary-300);
+}
+.mobile-menu-btn:hover {
+  color: var(--color-primary-500);
 }
 
 /* Mobile menu */

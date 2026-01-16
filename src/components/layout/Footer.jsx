@@ -1,39 +1,44 @@
 import React from 'react';
-import { Heart, Mail, Instagram, Facebook } from 'lucide-react';
-import { WEDDING_INFO } from '@utils/constants';
+import { Heart, Mail, CalendarCheck } from 'lucide-react';
+import { useWeddingInfo } from '../../hooks/useWeddingInfo';
+import { useTranslation } from '../../hooks/useTranslations';
 import './Footer.css';
 
 export const Footer = () => {
+  const { t } = useTranslation();
+  const rsvpLink = 
+    { path: '/rsvp', label: t('nav.rsvp') }
+
+
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-grid">
           {/* Contact */}
-          <div className="footer-contact">
-            <h3>Get in Touch</h3>
-            <div className="footer-contact-info">
-              <Mail className="w-5 h-5" />
-              <a href={`mailto:${WEDDING_INFO.email}`}>
-                {WEDDING_INFO.email}
-              </a>
+        <div className="footer-contact">
+                <h3>Get in Touch</h3>
+                <a href={t('contact.erik_email')} className="footer-icon-wrapper">
+                <Mail className="w-6 h-6 md:w-8 md:h-8 footer-icon" />
+                </a>
             </div>
-          </div>
 
           {/* Center */}
-          <div className="footer-center">
-            <Heart className="footer-heart" />
-            <p>{WEDDING_INFO.bride} & {WEDDING_INFO.groom}</p>
-            <p className="footer-date">{WEDDING_INFO.date}</p>
-          </div>
+        <div className="footer-center hidden md:block">
+        <Heart className="footer-heart" />
+        <p>{t('wedding.bride')} & {t('wedding.groom')}</p>
+        <p className="footer-date">{t('wedding.date')}</p>
+        </div>
 
-          {/* Social */}
-          <div className="footer-social">
-            <h3>Follow Us</h3>
-            <div className="footer-social-links">
-              <a href="#"><Instagram /></a>
-              <a href="#"><Facebook /></a>
-            </div>
-          </div>
+          {/* RSVP */}
+        <div className="footer-rsvp">
+            <h3>Are you coming?</h3>
+            <a href={t('contact.erik_email')} className="footer-icon-wrapper">
+                <a href={rsvpLink.path} className="footer-icon-wrapper"></a>
+                <CalendarCheck className="w-6 h-6 md:w-8 md:h-8 footer-icon" />
+
+            </a>
+        </div>
+
         </div>
 
         <div className="footer-bottom">

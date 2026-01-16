@@ -7,6 +7,8 @@ import './Popup.css';
 const WeddingInvitationPopup = () => {
   const [showPopup, setShowPopup] = useState(true);
   const [popupVisible, setPopupVisible] = useState(false);
+  const invitationImage = `${import.meta.env.BASE_URL}assets/alex_card.jpeg`;
+
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -42,7 +44,7 @@ return (
     <div className="popup-inner">
       {/* Background image */}
       <img 
-        src="/assets/alex_card.jpeg" 
+        src={invitationImage}
         alt="Wedding couple" 
         className="popup-background"
       />

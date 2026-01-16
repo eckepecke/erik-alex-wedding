@@ -23,7 +23,7 @@ function ScrollToTop() {
 }
 
 function App() {
-
+    const BASE_PATH = import.meta.env.PROD ? '/erik-alex-wedding/' : '/';
     const [isAuthenticated, setIsAuthenticated] = useState(false);
 
     useEffect(() => {
@@ -41,7 +41,7 @@ function App() {
 // Your normal router content...
   return (
     <TranslationProvider> {/* Add this wrapper */}
-      <Router>
+      <Router basename={BASE_PATH}>
         <ScrollToTop />
         <div className="min-h-screen bg-white">
           <Navigation />

@@ -11,18 +11,26 @@
 }
 
 .footer-grid {
-  @apply grid md:grid-cols-3 gap-8;
+  @apply grid grid-cols-2 md:grid-cols-3 gap-8;
 }
 
-/* Contact section */
-.footer-contact {
-  @apply text-center md:text-left;
+.footer-icon-wrapper {
+  @apply flex justify-center mt-2;
 }
 
-.footer-contact h3 {
-  @apply text-lg font-semibold mb-4;
+/* Contact and RSVP sections */
+/* Contact and RSVP sections */
+.footer-contact,
+.footer-rsvp {
+  @apply text-center;
+}
+
+.footer-contact h3,
+.footer-rsvp h3 {
+  @apply text-base md:text-lg font-semibold mb-4;
   color: var(--navbar-footer-text);
 }
+/* Contact section */
 
 .footer-contact-info {
   @apply flex items-center justify-center md:justify-start gap-2;
@@ -55,28 +63,23 @@
   color: var(--navbar-footer-subtext);
 }
 
-/* Social section */
-.footer-social {
-  @apply text-center md:text-right;
-}
+/* rsvp section */
+/* .footer-rsvp {
+  @apply flex flex-col items-center mt-2 md:items-end;
+} */
 
-.footer-social h3 {
-  @apply text-lg font-semibold mb-4;
-  color: var(--navbar-footer-text);
-}
-
-.footer-social-links {
+.footer-rsvp-links {
   @apply flex justify-center md:justify-end gap-4;
 }
 
-.footer-social-links a {
+.footer-rsvp-links a {
   color: var(--navbar-footer-accent);
   &:hover {
     color: var(--navbar-footer-accent-hover);
   }
 }
 
-.footer-social-links svg {
+.footer-rsvp-links svg {
   @apply w-6 h-6;
 }
 
@@ -85,4 +88,14 @@
   @apply mt-8 pt-8 text-center text-sm;
   border-top: 1px solid var(--navbar-footer-border);
   color: var(--navbar-footer-subtext);
+}
+
+.footer-icon {
+  color: var(--navbar-footer-accent);
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.footer-icon:hover {
+  color: var(--navbar-footer-accent-hover);
+  transform: translateY(-1px);
 }

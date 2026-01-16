@@ -5,8 +5,7 @@ import './Home.css';
 
 const Home = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
-
-  const backgroundImage = "/assets/EA.jpeg";
+  const backgroundImage = `${import.meta.env.BASE_URL}assets/EA.jpeg`;
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden">

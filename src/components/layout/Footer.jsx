@@ -32,10 +32,8 @@ export const Footer = () => {
           {/* RSVP */}
         <div className="footer-rsvp">
             <h3>Are you coming?</h3>
-            <a href={t('contact.erik_email')} className="footer-icon-wrapper">
-                <a href={rsvpLink.path} className="footer-icon-wrapper"></a>
+            <a href={rsvpLink.path} className="footer-icon-wrapper">
                 <CalendarCheck className="w-6 h-6 md:w-8 md:h-8 footer-icon" />
-
             </a>
         </div>
 

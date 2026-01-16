@@ -2,7 +2,7 @@
 // src/App.jsx
 // ============================================
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // <-- HashRouter
 import { TranslationProvider } from './hooks/useTranslations.jsx';
 import { Navigation } from './components/layout/Navigation';
 import { Footer } from './components/layout/Footer';
@@ -16,32 +16,29 @@ import Travel from './pages/Travel';
 
 import { PasswordGate } from './components/PasswordGate/PasswordGate';
 
-
 function ScrollToTop() {
   useScrollToTop();
   return null;
 }
 
 function App() {
-    const BASE_PATH = import.meta.env.PROD ? '/erik-alex-wedding/' : '/';
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-    useEffect(() => {
+  useEffect(() => {
     const auth = sessionStorage.getItem('wedding_auth');
     if (auth === 'true') setIsAuthenticated(true);
-    }, []);
+  }, []);
 
-    if (!isAuthenticated) {
+  if (!isAuthenticated) {
     return <PasswordGate onAuthenticate={() => {
-        setIsAuthenticated(true);
-        sessionStorage.setItem('wedding_auth', 'true');
+      setIsAuthenticated(true);
+      sessionStorage.setItem('wedding_auth', 'true');
     }} />;
-    }
+  }
 
-// Your normal router content...
   return (
-    <TranslationProvider> {/* Add this wrapper */}
-      <Router basename={BASE_PATH}>
+    <TranslationProvider>
+      <Router>
         <ScrollToTop />
         <div className="min-h-screen bg-white">
           <Navigation />

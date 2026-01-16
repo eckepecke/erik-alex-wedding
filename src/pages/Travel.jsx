@@ -7,6 +7,7 @@ import './PageSection.css';
 import './commons.css';
 import { useWeddingInfo } from "../hooks/useWeddingInfo"
 import { useTranslation } from '../hooks/useTranslations';
+import Hotels from '../components/travel/Hotels.jsx';
 
 
 const Travel = () => {
@@ -106,7 +107,8 @@ const Travel = () => {
 
 
         {/* Where to Stay */}
-        <Card className="travel-card detail-card">
+        <Hotels />
+        {/* <Card className="travel-card detail-card">
           <div className="flex items-center gap-4 mb-6">
             <Hotel className="detail-item-icon" />
             <h2>Where to Stay</h2>
@@ -145,7 +147,7 @@ const Travel = () => {
               <p><a href="mailto:fo@hotel-stockinger.at">fo@hotel-stockinger.at</a></p>
             </div>
           </div>
-        </Card>
+        </Card> */}
       </section>
       </div>
     </>

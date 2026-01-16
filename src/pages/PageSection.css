@@ -1,8 +1,11 @@
 /* src/components/layout/PageSection.css */
 
 /* Wrapper for any page section */
+/* Wrapper for any page section */
 .page-section {
   @apply py-16 px-6 min-h-screen flex flex-col items-center;
+  @apply sm:px-6 md:px-6 lg:px-6; /* optional explicit sizing */
+  @apply px-0 sm:px-6; /* remove horizontal padding on small screens */
   background-color: var(--color-bg-white); /* main page background variable */
 }
 

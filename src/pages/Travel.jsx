@@ -22,7 +22,7 @@ const Travel = () => {
       />
     <div className="page-section"> {/* Full-width background wrapper */}
 
-      <section className="travel-section container-custom">
+    <section className="travel-section w-full px-4 md:px-6 lg:px-8">
         {/* Getting There */}
         <Card className="travel-card detail-card">
           <div className="flex items-center gap-4 mb-6">
@@ -108,46 +108,7 @@ const Travel = () => {
 
         {/* Where to Stay */}
         <Hotels />
-        {/* <Card className="travel-card detail-card">
-          <div className="flex items-center gap-4 mb-6">
-            <Hotel className="detail-item-icon" />
-            <h2>Where to Stay</h2>
-          </div>
-          <p className="mb-6">
-            We’ve put together a few nearby places to make your stay comfortable.
-          </p>
-
-          <div className="grid sm:grid-cols-2 gap-6">
-            <div>
-              <h3>🏨 Hotel Wiental</h3>
-              <p>From 1 night • <a href="mailto:info@wiental.com">info@wiental.com</a></p>
-            </div>
-            <div>
-              <h3>🏡 Wolf Hof Apartments</h3>
-              <p>From 3 nights • <a href="mailto:zimmer@wolfhof.at">zimmer@wolfhof.at</a></p>
-            </div>
-            <div>
-              <h3>🌲 Almstüberl</h3>
-              <p>From 1 night • <a href="mailto:berger@pension-almstueberl.at">berger@pension-almstueberl.at</a></p>
-            </div>
-            <div>
-              <h3>☕ Café Pension Fam. Parzer</h3>
-              <p><a href="mailto:pension.parzer@aon.at">pension.parzer@aon.at</a></p>
-            </div>
-            <div>
-              <h3>🏨 Hotel Rosner</h3>
-              <p>From 1 night • <a href="mailto:office@hotel-rosner.at">office@hotel-rosner.at</a></p>
-            </div>
-            <div>
-              <h3>🍽️ Corso Bed & Breakfast & Café</h3>
-              <p>Comfortable and welcoming, close to the venue.</p>
-            </div>
-            <div>
-              <h3>🏔️ Hotel-Restaurant Stockinger</h3>
-              <p><a href="mailto:fo@hotel-stockinger.at">fo@hotel-stockinger.at</a></p>
-            </div>
-          </div>
-        </Card> */}
+        
       </section>
       </div>
     </>

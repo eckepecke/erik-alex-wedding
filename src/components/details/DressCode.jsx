@@ -11,13 +11,16 @@ const dressImages = [
 //   '/assets/dress-3.jpeg',
   `${import.meta.env.BASE_URL}assets/dress-1.jpeg`,
   `${import.meta.env.BASE_URL}assets/dress-2.jpeg`,
-  `${import.meta.env.BASE_URL}assets/dress-3.jpeg`
+  `${import.meta.env.BASE_URL}assets/dress-3.jpeg`,
+  `${import.meta.env.BASE_URL}assets/suit-4.jpeg`,
 ];
 
 const suitImages = [
   `${import.meta.env.BASE_URL}assets/suit-1.jpeg`,
   `${import.meta.env.BASE_URL}assets/suit-2.jpeg`,
-  `${import.meta.env.BASE_URL}assets/suit-3.jpeg`
+  `${import.meta.env.BASE_URL}assets/suit-3.jpeg`,
+  `${import.meta.env.BASE_URL}assets/suit-4.jpeg`
+
 //   '/assets/suit-4.jpeg',
 //   '/assets/suit-5.jpeg',
 ];

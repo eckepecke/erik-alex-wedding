@@ -2,9 +2,27 @@
 
 
 
+/* .detail-card {
+    @apply mb-8;
+    background-color: var(--card-color-light) !important;
+} */
+
 .detail-card {
     @apply mb-8;
     background-color: var(--card-color-light) !important;
+}
+
+/* Wider cards on medium+ screens */
+@media (min-width: 768px) {
+    .detail-card {
+        max-width: 750px; /* Slightly wider */
+    }
+}
+
+@media (min-width: 1024px) {
+    .detail-card {
+        max-width: 900px; /* Even wider for desktops */
+    }
 }
 
 .detail-card h2 {

@@ -18,12 +18,6 @@ export const Gifts = () => {
         </div>
         <div className="detail-item-text">
           <p className="detail-item-paragraph">{t('details.registry.description')}</p>
-          <a 
-            href="/registry"
-            className="gifts-link"
-          >
-            {t('details.registry.button')}
-          </a>
         </div>
     </Card>
   );

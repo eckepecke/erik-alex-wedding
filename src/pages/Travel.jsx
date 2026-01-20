@@ -22,7 +22,7 @@ const Travel = () => {
       />
     <div className="page-section"> {/* Full-width background wrapper */}
 
-    <section className="travel-section w-full px-4 md:px-6 lg:px-8">
+    <section className="travel-section w-full max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
         {/* Getting There */}
         <Card className="travel-card detail-card">
           <div className="flex items-center gap-4 mb-6">

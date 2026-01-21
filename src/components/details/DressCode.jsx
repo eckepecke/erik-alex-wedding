@@ -12,14 +12,14 @@ const dressImages = [
   `${import.meta.env.BASE_URL}assets/dress-1.jpeg`,
   `${import.meta.env.BASE_URL}assets/dress-2.jpeg`,
   `${import.meta.env.BASE_URL}assets/dress-3.jpeg`,
-  `${import.meta.env.BASE_URL}assets/suit-4.jpeg`,
+//   `${import.meta.env.BASE_URL}assets/suit-4.jpeg`,
 ];
 
 const suitImages = [
   `${import.meta.env.BASE_URL}assets/suit-1.jpeg`,
   `${import.meta.env.BASE_URL}assets/suit-2.jpeg`,
   `${import.meta.env.BASE_URL}assets/suit-3.jpeg`,
-  `${import.meta.env.BASE_URL}assets/suit-4.jpeg`
+//   `${import.meta.env.BASE_URL}assets/suit-4.jpeg`
 
 //   '/assets/suit-4.jpeg',
 //   '/assets/suit-5.jpeg',
@@ -56,19 +56,19 @@ export const DressCode = () => {
           <div className="dresscode-gallery">
 
             <div className="dresscode-gallery-group">
-
-              <div className="dresscode-gallery-grid">
+            <div className="dresscode-gallery-column">
                 {dressImages.map((src) => (
-                  <img key={src} src={src} alt="Dress inspiration" />
+                <img key={src} src={src} alt="Dress inspiration" />
                 ))}
-              </div>
             </div>
+            </div>
+
             <div className="dresscode-gallery-group">
-              <div className="dresscode-gallery-grid">
+            <div className="dresscode-gallery-column">
                 {suitImages.map((src) => (
-                  <img key={src} src={src} alt="Suit inspiration" />
+                <img key={src} src={src} alt="Suit inspiration" />
                 ))}
-              </div>
+            </div>
             </div>
           </div>
         </div>

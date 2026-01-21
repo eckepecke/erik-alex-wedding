@@ -43,7 +43,28 @@
   margin-bottom: 1.25rem;
 }
 
-.dresscode-gallery-grid {
+.dresscode-gallery-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dresscode-gallery-column img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dresscode-gallery-column img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+
+/* .dresscode-gallery-grid {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -62,4 +83,4 @@
 .dresscode-gallery-grid img:hover {
   transform: scale(1.03);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-}
+} */

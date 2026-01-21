@@ -23,10 +23,10 @@ export const Photography = () => {
             <li>
             <strong>{t('details.photography.unpluggedStrong')}</strong> {t('details.photography.unpluggedText')}
             </li>
-            <li>
+            {/* <li>
             <strong>{t('details.photography.shareStrong')}</strong> {t('details.photography.shareText')} 
             <span className="photography-hash"> #AlexandraAndErik2026</span> {t('details.photography.shareTextAfter')}
-            </li>
+            </li> */}
             <li>
             <strong>{t('details.photography.professionalStrong')}</strong> {t('details.photography.professionalText')}
             </li>

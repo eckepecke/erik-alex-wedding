@@ -18,27 +18,52 @@ export const useWeddingInfo = () => {
     }
   };
 
-    const schedule = () => {
+  const schedule = () => {
     try {
-        const translatedSchedule = t('wedding.schedule');
+      const translatedSchedule = t('wedding.schedule');
 
-        if (
+      if (
         translatedSchedule &&
         typeof translatedSchedule === 'object' &&
         Array.isArray(translatedSchedule.items)
-        ) {
+      ) {
         return translatedSchedule;
-        }
+      }
     } catch (e) {
-        // fallback
+      // fallback
     }
 
     return SCHEDULE;
+  };
+
+  const travel = () => {
+    try {
+      const translatedTravel = t('travel');
+
+      if (
+        translatedTravel &&
+        typeof translatedTravel === 'object'
+      ) {
+        return translatedTravel;
+      }
+    } catch (e) {
+      // fallback
+    }
+
+    // Return a default travel object or import from constants
+    return {
+      title: 'Travel & Stay',
+      subtitle: 'How to reach us and where to rest your head',
+      gettingToVienna: t('travel.gettingToVienna'),
+      gettingToVenue: t('travel.gettingToVenue'),
+      transfers: t('travel.transfers')
     };
+  };
 
   return {
     weddingInfo,
     schedule: schedule(),
+    travel: travel(),
     weddingDate: WEDDING_DATE,
     rsvpDeadline: WEDDING_INFO.rsvpDeadline,
     email: WEDDING_INFO.email

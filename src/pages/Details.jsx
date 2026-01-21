@@ -27,7 +27,6 @@ const Details = () => {
       <div className="container-custom py-16">
         <InfoCards />
         <DressCode />
-        {/* <CeremonyReception /> */}
         <Photography />
         <Gifts />
       </div>

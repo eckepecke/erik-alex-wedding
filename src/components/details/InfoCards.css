@@ -2,7 +2,7 @@
 
 /* Grid wrapper remains the same */
 .info-cards-grid {
-  @apply grid gap-8 mb-16;
+  @apply grid gap-8;
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 

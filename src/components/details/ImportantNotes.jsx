@@ -15,8 +15,8 @@ export const ImportantNotes = () => {
         </h2>
         <div className="important-notes-grid">
           <div className="important-note-card">
-            <h4>{t('details.importantNotes.weather.title')}</h4>
-            <p>{t('details.importantNotes.weather.description')}</p>
+            <h4>{t('details.importantNotes.shuttle.title')}</h4>
+            <p>{t('details.importantNotes.shuttle.description')}</p>
           </div>
           <div className="important-note-card">
             <h4>{t('details.importantNotes.parking.title')}</h4>
